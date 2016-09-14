@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1291147261 source:d:\mehmet ak›f\kodes\project\getchar\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

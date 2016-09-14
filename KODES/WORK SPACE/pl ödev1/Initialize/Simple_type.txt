@@ -1,0 +1,3 @@
+    Simple_type *simple_type=create_by_name("Simple_type");
+    simple_type->special_symbol=0;
+    printf_simple_type(simple_type);

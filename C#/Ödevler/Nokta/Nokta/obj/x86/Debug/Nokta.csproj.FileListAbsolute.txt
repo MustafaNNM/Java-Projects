@@ -1,0 +1,9 @@
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\bin\Debug\Nokta.exe
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\bin\Debug\Nokta.pdb
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\obj\x86\Debug\Nokta.Form1.resources
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\obj\x86\Debug\Nokta.Properties.Resources.resources
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\obj\x86\Debug\Nokta.exe
+c:\users\toshiba\documents\visual studio 2010\Ödevler\Nokta\Nokta\obj\x86\Debug\Nokta.pdb

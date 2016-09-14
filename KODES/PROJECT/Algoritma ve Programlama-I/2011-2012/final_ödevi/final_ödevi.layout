@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="kalkis_yerine_gore_ucus_listesi.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="310" topLine="0" />
+	</File>
+	<File name="kalkis_yerine_gore_ucus_listesi.h" open="1" top="0" tabpos="5">
+		<Cursor position="325" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="1284" topLine="21" />
+	</File>
+	<File name="ucus.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="1" topLine="0" />
+	</File>
+	<File name="ucus.h" open="1" top="0" tabpos="1">
+		<Cursor position="297" topLine="0" />
+	</File>
+	<File name="ucus_numarasina_gore_ucus_listesi.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="217" topLine="0" />
+	</File>
+	<File name="ucus_numarasina_gore_ucus_listesi.h" open="1" top="0" tabpos="3">
+		<Cursor position="480" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

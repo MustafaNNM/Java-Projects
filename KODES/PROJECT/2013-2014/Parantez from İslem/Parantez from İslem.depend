@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1360547343 source:c:\users\toshiba\documents\c&&java\kodes\project\parantez from Ýslem\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

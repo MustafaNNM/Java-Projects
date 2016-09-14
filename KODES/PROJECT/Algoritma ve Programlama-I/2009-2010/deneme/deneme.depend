@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1274137854 source:d:\mehmet ak›f\kodes\project\deneme\main.cpp
+	<iostream>
+	"karmasik.h"
+
+1274138367 source:d:\mehmet ak›f\kodes\project\deneme\karmasik.cpp
+	<iostream>
+	"karmasik.h"
+
+1274138493 d:\mehmet ak›f\kodes\project\deneme\karmasik.h
+

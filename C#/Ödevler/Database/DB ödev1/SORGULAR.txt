@@ -1,0 +1,88 @@
+6.
+a)
+1-	LANGUAGE tablosuna yeni bir varlýk ekleyiniz.
+
+	INSERT INTO LANGUAGE
+	VALUES (998,998,'English');
+
+	
+	KNOWLEDGE tablosunda 5 numaralý profile sahip sahip kullanýcýnýn bilgilerinin silinmesi.
+
+	DELETE FROM KNOWLEDGE
+	WHERE  	profile_id=5;
+
+
+	PROFILE tablosunda 555 numaralý e-mail numarasýna sahip kullanýcýnýn "hakkýnda"ki bilgisinin update edilmesi
+
+	UPDATE PROFILE
+	SET notes='When I grown up,I want to be a DBA.'
+	WHERE email_id=555;
+	
+
+b)
+
+i)	
+	Adý Deniz ve cinsiyeti Erkek olan kiþilerin isim ve soyisimlerinin listelenmesi
+
+	SELECT name_first,name_last
+	FROM [USER]
+	WHERE sex='M' AND name_first='Mesut' ;
+
+
+	
+
+	Yaþadýðý þehirin baþ harfi 'A' veya yaþadýðý ülkenin son harfi 'Y' olan kiþilerin profil numaralarýnýn listelenmesi.
+	
+	SELECT	profile_id
+	FROM	KNOWLEDGE
+	WHERE   city LIKE 'A%' OR count LIKE '%y' ;
+
+	
+
+	Yaþadýðý þehir Ýstanbul olan kaç kiþi olduðunun listelenmesi.
+
+	SELECT	COUNT(city) AS IstanbulluKacKisiyiz
+	FROM KNOWLEDGE
+	WHERE city='istanbul' ;	
+
+
+
+	
+	Hangi ülkelerden kullanýcýlarýn olduðunun listelmesi
+
+	SELECT DISTINCT count
+	FROM KNOWLEDGE ;	
+
+
+
+ii)	
+	Bekar olan kiþilerden cinsiyetleri erkek olanlarýn bu bilgilerinin listelenmesi
+	SELECT 	U.name_last, U.name_first, U.sex, P.relationship
+	FROM 	"USER" AS U
+	INNER 	JOIN PROFILE AS P
+	ON 	U.email_id=P.email_id
+	WHERE 	U.sex='M' AND P.relationship='B'
+	ORDER BY U.sex ;
+
+
+
+
+	111 numaralý e mail numarasuna sahip kullanýcýnýn 963 numaralý mesajýnýn içeriðininin gösterilmesi.
+	SELECT 	MESSAGE.messages
+	FROM 	"USER","MESSAGE"
+	WHERE 	USER.email_id=MESSAGE.email_id AND email_id=111 AND message_id=963 ;
+0
+	
+	
+
+iii)
+	Sezen Aksu hayraný olup ayný zamanda Evli olan kiþilerin isimlerinin ve soyisimlerinin listelenmesi
+
+	SELECT 	name_first,name_last
+	FROM 	"USER","PROFILE","KNOWLEDGE"
+	WHERE	USER.email_id=PROFILE.email_id AND PROFILE.profile_id=KNOWLEDGE.profile_id AND fav_artist='Sezen Aksu' AND relationship='E' ;
+
+
+		
+
+	

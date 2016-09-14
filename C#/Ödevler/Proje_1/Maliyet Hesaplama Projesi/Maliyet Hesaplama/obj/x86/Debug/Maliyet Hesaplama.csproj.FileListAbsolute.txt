@@ -1,0 +1,9 @@
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\bin\Debug\Maliyet Hesaplama.exe
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\bin\Debug\Maliyet Hesaplama.pdb
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\obj\x86\Debug\Maliyet_Hesaplama.Form1.resources
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\obj\x86\Debug\Maliyet_Hesaplama.Properties.Resources.resources
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\obj\x86\Debug\Maliyet Hesaplama.exe
+c:\Users\TOSHIBA\Documents\Visual Studio 2010\Odevler\Proje_1\Maliyet Hesaplama Projesi\Maliyet Hesaplama\obj\x86\Debug\Maliyet Hesaplama.pdb

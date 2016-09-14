@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1300056574 source:d:\kodes\project\kontor_yukleme_programý\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1300056574 source:d:\kodes\project\odev 1\kontor_yukleme_programý\main.c
+	<stdio.h>
+	<stdlib.h>
+

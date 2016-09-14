@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title></title>
+	<style type="text/css">
+		body {background-color: #FFFF88; font-family: arial;}
+		img {border: none;}
+	</style>
+<an_nuid data="c6204c07e9f184a76ef3fd2ddb44eb4c"/>
+<an_duid data="0cae375d2c383c7373946d97de00d6de"/>
+</head>
+<body>
+<p> 
+	<font>#include &lt;stdio.h></font>
+</p>
+<p> 
+	<font>#include &lt;stdlib.h></font>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p> 
+	<font>struct data</font>
+</p>
+<p> 
+	<font>{</font>
+</p>
+<p> 
+	<font>char line[26]="";</font>
+</p>
+<p> 
+	<font>};</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>char *menu_olustur();</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>void menu_yazdir(char hazir_menu[],int boyut);</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>int tercih_yap(int i_liste);</font>
+</p>
+<p> 
+	<font>void program();</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>int main(void)</font>
+</p>
+<p> 
+	<font>{</font>
+</p>
+<p> 
+	<font>   char *hazir_menu;</font>
+</p>
+<p> 
+	<font>   int secim;</font>
+</p>
+<p> 
+	<font>hazir_menu=menu_olustur();</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>      for(;;)</font>
+</p>
+<p> 
+	<font>      {</font>
+</p>
+<p> 
+	<font>         menu_yazdir();</font>
+</p>
+<p> 
+	<font>         secim=tercih_yap();</font>
+</p>
+<p> 
+	<font>         switch(secim)</font>
+</p>
+<p> 
+	<font>         {</font>
+</p>
+<p> 
+	<font>            case 1:</font>
+</p>
+<p> 
+	<font>            program();</font>
+</p>
+<p> 
+	<font>            break;</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>            default :</font>
+</p>
+<p> 
+	<font>            exit(EXIT_SUCCES);</font>
+</p>
+<p> 
+	<font>       }</font>
+</p>
+<p> 
+	<font>    }</font>
+</p>
+<p> 
+	<font>}</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>char *menu_olustur()</font>
+</p>
+<p> 
+	<font>{</font>
+</p>
+<p> 
+	<font>   int i_liste=0;</font>
+</p>
+<p> 
+	<font>   FILE *fptr;</font>
+</p>
+<p> 
+	<font>   char *dosya_adi="liste.txt",*amac="r";</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>  *liste[]=</font>
+</p>
+<p> 
+	<font>    {</font>
+</p>
+<p> 
+	<font>    ""</font>
+</p>
+<p> 
+	<font>    };</font>
+</p>
+<p> 
+	<font>    </font>
+</p>
+<p> 
+	<font>    if((fptr=fopen(dosya_adi,amac);)==NULL)</font>
+</p>
+<p> 
+	<font>   {</font>
+</p>
+<p> 
+	<font>      printf("%s dosyasi acilamadi\n",dosya_adi);</font>
+</p>
+<p> 
+	<font>   }</font>
+</p>
+<p> 
+	<font>   else</font>
+</p>
+<p> 
+	<font>   { </font>
+</p>
+<p> 
+	<font>      fget(satir,fptr);</font>
+</p>
+<p> 
+	<font>      while(!feof)</font>
+</p>
+<p> 
+	<font>      {</font>
+</p>
+<p> 
+	<font>         liste[i_liste]=satir;</font>
+</p>
+<p> 
+	<font>         ++i_liste;</font>
+</p>
+<p> 
+	<font>         fget(satir,fptr);</font>
+</p>
+<p> 
+	<font>       }</font>
+</p>
+<p> 
+	<font>       return liste;</font>
+</p>
+<p> 
+	<font>   }</font>
+</p>
+<p> 
+	<font>}</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>void menu_yazdir(char hazir_menu[],int boyut)</font>
+</p>
+<p> 
+	<font>{</font>
+</p>
+<p> 
+	<font>   printf("***Menu***\n");</font>
+</p>
+<p> 
+	<font> </font>
+</p>
+<p> 
+	<font>   for(i=0;i&lt;boyut;++i)</font>
+</p>
+<p> 
+	<font>   {</font>
+</p>
+<p> 
+	<font>      printf("%02d ) %s",i+1,hazir_menu[i]);</font>
+</p>
+<p> 
+	<font>   }</font>
+</p>
+<p> 
+	<font>}</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>int tercih_yap(int i_liste)</font>
+</p>
+<p> 
+	<font>{</font>
+</p>
+<p> 
+	<font>   int j=0,tercih;</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>   do</font>
+</p>
+<p> 
+	<font>   {</font>
+</p>
+<p> 
+	<font>      if(0&lt;j)</font>
+</p>
+<p> 
+	<font>      {</font>
+</p>
+<p> 
+	<font>         printf("Seciminiz[1-%d]\n?",1+i_liste);</font>
+</p>
+<p> 
+	<font>       }</font>
+</p>
+<p> 
+	<font>      fflush(stdin);</font>
+</p>
+<p> 
+	<font>      scanf("%d",&amp;tercih);</font>
+</p>
+<p> 
+	<font>      ++j;</font>
+</p>
+<p> 
+	<font>   }</font>
+</p>
+<p> 
+	<font>   while(!(1&lt;tercih&amp;&amp;tercih&lt;i_liste));</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>   return tercih;</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>}</font>
+</p>
+<p>
+</p>
+<p> 
+	<font>void program()</font>
+</p>
+<p> 
+	<font>{</font>
+</p>
+<p> 
+	<font>   printf("yapilmadi ki\n");</font>
+</p>
+<p> 
+	<font>}</font>
+</p>
+</body>
+</html>

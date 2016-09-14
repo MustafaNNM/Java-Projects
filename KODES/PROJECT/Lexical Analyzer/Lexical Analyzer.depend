@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1334697633 source:c:\users\toshiba\documents\c&&java\kodes\project\lexical analyzer\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

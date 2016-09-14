@@ -1,0 +1,7 @@
+123Ali Kaya                 02062005Uzman          1.25
+133Ahmet Taskiran           11092002Uzman          1.35
+156Ayse Mert                10102001Bas Uzman      1.85
+156Ahmet Olcay              30012001Uzman          1.45
+185Fatma Elmas              23062003Uzman          1.2
+271Hasan Tahsin             05011999Sube Muduru    2.15
+299Pinar Deniz              09092009Stajer         0.95

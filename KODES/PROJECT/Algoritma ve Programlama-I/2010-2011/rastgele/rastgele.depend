@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1281818198 source:d:\mehmet ak›f\kodes\project\rastgele\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

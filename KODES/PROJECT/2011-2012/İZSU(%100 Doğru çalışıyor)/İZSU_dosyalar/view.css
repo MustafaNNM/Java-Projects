@@ -1,0 +1,324 @@
+#form_container {
+	background: rgb(255, 255, 255); margin: 0px auto; width: 90%; text-align: left;
+}
+#form_container .appnitro {
+	font-family: Lucida Grande, Tahoma, Arial, Verdana, sans-serif; font-size: small;
+}
+#form_container .appnitro li {
+	width: 61%;
+}
+#divForm ul {
+	margin: 0px; padding: 0px; width: 100%; font-size: 100%; list-style-type: none;
+}
+#divForm li {
+	background: rgb(255, 255, 255); margin: 0px; padding: 4px 5px 2px 9px; display: block; position: relative;
+}
+#divForm li::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+#form_container .buttons::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+#form_container .buttons {
+	clear: both; margin-top: 10px; display: block;
+}
+#divForm li div {
+	margin: 0px 4px 0px 0px; padding: 0px 0px 8px; color: rgb(68, 68, 68);
+}
+#divForm li span {
+	margin: 0px 4px 0px 0px; padding: 0px 0px 8px; color: rgb(68, 68, 68); float: left;
+}
+#divForm li div.left {
+	width: 48%; float: left; display: inline;
+}
+#divForm li div.right {
+	width: 48%; float: right; display: inline;
+}
+#divForm li div.left .medium {
+	width: 100%;
+}
+#divForm li div.right .medium {
+	width: 100%;
+}
+#divForm li div label {
+	margin: 0px; color: rgb(68, 68, 68); line-height: 9px; padding-top: 3px; clear: both; font-size: 9px; display: block;
+}
+#divForm li span label {
+	margin: 0px; color: rgb(68, 68, 68); line-height: 9px; padding-top: 3px; clear: both; font-size: 9px; display: block;
+}
+#divForm li .datepicker {
+	margin: 0.1em 5px 0px 0px; padding: 0px; width: 16px; height: 16px; float: left; cursor: pointer !important;
+}
+#form_container .form_description {
+	margin: 0px 0px 1em; clear: both; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted; display: inline-block;
+}
+#form_container [class].form_description {
+	display: block;
+}
+#form_container .form_description h2 {
+	margin: 0px 0px 3px; clear: left; font-size: 160%; font-weight: 400;
+}
+#form_container .form_description p {
+	margin: 0px 0px 12px; line-height: 130%; font-size: 95%;
+}
+#divForm hr {
+	display: none;
+}
+#divForm li.section_break {
+	width: 97% !important; padding-top: 13px; padding-bottom: 0px; padding-left: 9px; margin-top: 9px; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: dotted;
+}
+#divForm ul li.first {
+	padding-top: 0px !important; margin-top: 0px !important; border-top-color: currentColor !important; border-top-width: medium !important; border-top-style: none !important;
+}
+#divForm .section_break h3 {
+	margin: 0px 0px 2px; line-height: 130%; font-size: 110%; font-weight: 400;
+}
+#divForm .section_break p {
+	margin: 0px 0px 10px; font-size: 85%;
+}
+#form_container input.button_text {
+	padding: 0px 7px; width: auto; overflow: visible;
+}
+#form_container .buttons input {
+	font-size: 120%; margin-right: 5px;
+}
+#form_container label.description {
+	padding: 0px 0px 1px; border: currentColor; color: rgb(34, 34, 34); line-height: 150%; font-size: 95%; font-weight: 700; display: block;
+}
+#form_container input.text {
+	background: url("images/shadow.png") repeat-x top rgb(255, 255, 255); padding: 3px; border: 1px solid rgb(195, 195, 195); height: 20px; color: rgb(51, 51, 51); font-size: 16px;
+}
+#form_container input.file {
+	margin: 0px; padding: 2px 0px; height: 20px; color: rgb(51, 51, 51); font-size: 100%;
+}
+#form_container textarea.textarea {
+	background: url("images/shadow.png") repeat-x top rgb(255, 255, 255); margin: 0px; border: 1px solid rgb(195, 195, 195); width: 99%; color: rgb(51, 51, 51); font-size: 16px;
+}
+#form_container select.select {
+	background: url("images/shadow.png") repeat-x top rgb(255, 255, 255); margin: 1px 0px; padding: 1px 0px 0px; border: 1px solid rgb(195, 195, 195); color: rgb(51, 51, 51);
+}
+#form_container input.currency {
+	text-align: right;
+}
+#form_container input.checkbox {
+	margin: 6px 0px 0px 3px; width: 13px; height: 13px; line-height: 1.4em; display: block;
+}
+#form_container input.radio {
+	margin: 6px 0px 0px 3px; width: 13px; height: 13px; line-height: 1.4em; display: block;
+}
+#form_container label.choice {
+	margin: -1.55em 0px 0px 25px; padding: 4px 0px 5px; width: 90%; color: rgb(68, 68, 68); line-height: 1.4em; font-size: 100%; display: block;
+}
+#form_container select[class].select {
+	margin: 0px; padding: 1px 0px;
+}
+#form_container *:first-child + html select[class].select {
+	margin: 1px 0px;
+}
+#form_container .safari select.select {
+	height: 20px; font-size: 120% !important; margin-bottom: 1px;
+}
+#form_container input.small {
+	width: 25%;
+}
+#form_container select.small {
+	width: 25%;
+}
+#form_container input.medium {
+	width: 50%;
+}
+#form_container select.medium {
+	width: 50%;
+}
+#form_container input.large {
+	width: 99%;
+}
+#form_container select.large {
+	width: 100%;
+}
+#form_container textarea.small {
+	height: 5.5em;
+}
+#form_container textarea.medium {
+	height: 10em;
+}
+#form_container textarea.large {
+	height: 20em;
+}
+#form_container #error_message {
+	background: rgb(255, 255, 255); border: 1px dotted red; width: 99%; text-align: center; padding-top: 4px; padding-right: 0px; padding-left: 0px; margin-bottom: 1em;
+}
+#form_container #error_message_title {
+	margin: 7px 0px 5px; padding: 0px; color: rgb(223, 0, 0); font-size: 125%;
+}
+#form_container #error_message_desc {
+	margin: 0px 0px 0.8em; color: rgb(0, 0, 0); font-size: 100%;
+}
+#form_container #error_message_desc strong {
+	padding: 2px 3px; color: red; background-color: rgb(255, 223, 223);
+}
+#divForm li.error {
+	margin: 3px 0px; border-right-color: rgb(234, 203, 204); border-bottom-color: rgb(234, 203, 204); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; background-color: rgb(255, 223, 223) !important;
+}
+#divForm li.error label {
+	color: rgb(223, 0, 0) !important;
+}
+#divForm p.error {
+	margin: 0px 0px 5px; color: red; clear: both; font-size: 10px; font-weight: 700;
+}
+#divForm .required {
+	color: red; font-weight: 700; float: none;
+}
+#divForm li:hover {
+	background-color: rgb(228, 244, 253);
+}
+#divForm .guidelines {
+	background: rgb(255, 14, 85); margin: 0px 0px 0px 8px; padding: 8px 10px 9px; border: 1px solid rgb(230, 230, 230); left: 100%; top: 0px; width: 42%; height: 50%; text-align: left; color: rgb(255, 255, 255); line-height: 130%; font-size: 100%; visibility: hidden; position: absolute; z-index: 1000;
+}
+#divForm .guidelines small {
+	font-size: 105%;
+}
+#divForm li.highlighted .guidelines {
+	visibility: visible;
+}
+#divForm li:hover .guidelines {
+	visibility: visible;
+}
+#form_container .no_guidelines .guidelines {
+	display: none !important;
+}
+#form_container .no_guidelines form li {
+	width: 97%;
+}
+#form_container .no_guidelines li.section {
+	padding-left: 9px;
+}
+#form_container .form_success {
+	margin: 0px; padding: 90px 0pt 100px; text-align: center; clear: both;
+}
+#form_container .form_success h2 {
+	margin: 0pt 0pt 3px; clear: left; font-size: 160%; font-weight: normal;
+}
+#form_container ul.password {
+	text-align: center; margin-top: 60px; margin-bottom: 60px;
+}
+#form_container .password h2 {
+	margin: 0pt auto 10px; color: rgb(223, 0, 0); font-weight: bold;
+}
+#form_container .password input.text {
+	width: 380px; text-align: center; font-size: 170% !important;
+}
+#form_container .password label {
+	padding-top: 10px; font-size: 120% !important; font-weight: bold; display: block;
+}
+#form_container #li_captcha {
+	padding-left: 5px;
+}
+#form_container #li_captcha span {
+	float: none;
+}
+div.calendar {
+	position: relative;
+}
+.calendar table {
+	background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); color: rgb(0, 0, 0); font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif; font-size: 11px; cursor: pointer;
+}
+.calendar .button {
+	padding: 2px; text-align: center;
+}
+.calendar .nav {
+	background: rgb(245, 245, 245);
+}
+.calendar thead .title {
+	background: rgb(222, 222, 222); padding: 2px 0px 3px; text-align: center; color: rgb(0, 0, 0); font-weight: bold;
+}
+.calendar thead .headrow {
+	background: rgb(245, 245, 245); color: rgb(68, 68, 68); font-weight: bold;
+}
+.calendar thead .daynames {
+	background: rgb(255, 255, 255); color: rgb(51, 51, 51); font-weight: bold;
+}
+.calendar thead .name {
+	padding: 2px; text-align: center; color: rgb(0, 0, 0); border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.calendar thead .weekend {
+	color: rgb(102, 102, 102);
+}
+.calendar thead .hilite {
+	padding: 1px; color: rgb(255, 255, 255); background-color: rgb(68, 68, 68);
+}
+.calendar thead .active {
+	padding: 2px 0px 0px 2px; color: rgb(255, 255, 255); background-color: rgb(209, 47, 25);
+}
+.calendar tbody .day {
+	padding: 2px; width: 1.8em; text-align: right; color: rgb(34, 34, 34);
+}
+.calendar tbody .othermonth.day {
+	color: rgb(187, 187, 187); font-size: 80%;
+}
+.calendar tbody .oweekend.othermonth.day {
+	color: rgb(255, 187, 187);
+}
+.calendar table .wn {
+	background: rgb(102, 102, 102); padding: 2px; border-right-color: rgb(0, 0, 0); border-right-width: 1px; border-right-style: solid;
+}
+.calendar tbody .rowhilite td {
+	background: rgb(255, 241, 175);
+}
+.calendar tbody .rowhilite td.wn {
+	background: rgb(255, 241, 175);
+}
+.calendar tbody td.hilite {
+	background: rgb(68, 68, 68) !important; padding: 1px; color: rgb(255, 255, 255) !important;
+}
+.calendar tbody td.active {
+	background: rgb(82, 146, 20) !important; padding: 2px 2px 0px; color: rgb(255, 255, 255);
+}
+.calendar tbody td.selected {
+	background: rgb(245, 245, 245) !important; padding: 1px; border: 1px solid rgb(136, 136, 136); color: rgb(34, 34, 34) !important; font-weight: bold;
+}
+.calendar tbody td.weekend {
+	color: rgb(102, 102, 102);
+}
+.calendar tbody td.today {
+	background: rgb(217, 239, 194); color: rgb(82, 146, 20); font-weight: bold;
+}
+.calendar tbody .disabled {
+	color: rgb(153, 153, 153);
+}
+.calendar tbody .emptycell {
+	visibility: hidden;
+}
+.calendar tbody .emptyrow {
+	display: none;
+}
+.calendar tfoot .footrow {
+	background: rgb(85, 85, 102); text-align: center; color: rgb(255, 255, 255);
+}
+.calendar tfoot .ttip {
+	background: rgb(34, 34, 34); padding: 3px; color: rgb(255, 255, 255); font-size: 10px; border-top-color: rgb(222, 222, 222); border-top-width: 1px; border-top-style: solid;
+}
+.calendar tfoot .hilite {
+	background: rgb(170, 170, 255); padding: 1px; border: 1px solid rgb(0, 68, 255); color: rgb(0, 0, 0);
+}
+.calendar tfoot .active {
+	background: rgb(119, 119, 204); padding: 2px 0px 0px 2px;
+}
+.calendar .combo {
+	background: rgb(245, 245, 245); border: 1px solid rgb(204, 204, 204); left: 0px; top: 0px; width: 4em; color: rgb(34, 34, 34); font-size: 90%; display: none; position: absolute; z-index: 100;
+}
+.calendar .combo .label {
+	padding: 1px; text-align: center;
+}
+.calendar .combo .label-IEfix {
+	padding: 1px; text-align: center;
+}
+.calendar .combo .label-IEfix {
+	width: 4em;
+}
+.calendar .combo .hilite {
+	background: rgb(68, 68, 68); color: rgb(255, 255, 255);
+}
+.calendar .combo .active {
+	background: rgb(222, 222, 222); font-weight: bold; border-top-color: rgb(153, 153, 153); border-bottom-color: rgb(153, 153, 153); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}

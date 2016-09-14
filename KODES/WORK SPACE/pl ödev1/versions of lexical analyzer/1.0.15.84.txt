@@ -1,0 +1,603 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*Desteklenen bazi karakterler*/
+char *yorum_isaretleri[2]={"{","}"};
+/*
+yorum   index no
+bas     '0'
+bitir   '1'
+*/
+/*Karakterler*/
+char letter[52]= {
+        'a','b','c','d','e','f','g','h','i','j',
+        'k','l','m','n','o','p','q','r','s','t',
+        'u','v','w','x','y','z','A','B','C','D',
+        'E','F','G','H','I','J','K','L','M','N',
+        'O','P','Q','R','S','T','U','V','W','X',
+        'Y','Z'
+};
+/*Sayilar*/
+/*Ayni zamanda Karakterler*/
+char digit[10]= {
+        '0','1','2','3','4','5','6','7','8','9'
+};
+/*Isaretler*/
+char *sign[3]= {"+","-",""};
+/*
+artý->0
+eksi->1
+isatersiz->2
+*/
+char *adding_operator[3]= {"+","-","or"};
+/*
+artý->0
+eksi->1
+or->2
+*/
+char *multiplying_operator[3]= {"*","div","end"};
+/*
+*->0
+div->1
+end->2
+*/
+char *relational_operator[6]= {"= =","<>","<","<=",">=",">"};
+/*
+operator index_no
+= =      '0'
+<>       '1'
+<        '2'
+<=       '3'
+>=       '4'
+>        '5'
+*/
+char *special_symbol[37]= {
+        "+","-","*","=","<>",
+        "<",">","<=",">=","(",
+        ")","[","]",":=",".",
+        ",",";",":","..",
+        "div","or","and","not",
+        "if","then","else","of",
+        "while","do","begin","end",
+        "read","write","var","array",
+        "procedure","program"
+};
+/*
+symbol index no
++      '0'
+-      '1'
+*      '2'
+=      '3'
+<>     '4'
+<      '5'
+>      '6'
+<=     '7'
+>=     '8'
+(      '9'
+)      '10'
+[      '11'
+]      '12'
+:=     '13'
+.      '14'
+,      '15'
+;      '16'
+:      '17'
+..     '18'
+div    '19'
+or     '20'
+and    '21'
+not    '22'
+if     '23'
+then   '24'
+else   '25'
+of     '26'
+while  '27'
+do     '28'
+begin  '29'
+end    '30'
+read   '31'
+write  '32'
+var    '33'
+array  '34'
+procedure '35'
+program   '36'
+*/
+
+typedef struct comment Comment;
+typedef struct empty Empty;
+typedef struct identifier Identifier;
+typedef struct new_identifier New_identifier;
+typedef struct integer_constant Integer_constant;
+typedef struct index_range Index_range;
+typedef struct simple_type Simple_type;
+typedef struct array_type Array_type;
+typedef struct type Type;
+typedef struct variable_declaration Variable_declaration;
+typedef struct new_variable_declaration New_variable_declaration;
+typedef struct variable_declaration_part Variable_declaration_part;
+typedef struct procedure_declaration Procedure_declaration;
+typedef struct new_procedure_declaration_part New_procedure_declaration_part;
+typedef struct procedure_declaration_part Procedure_declaration_part;
+typedef struct variable_identifier Variable_identifier;
+typedef struct entire_variable Entire_variable;
+typedef struct array_variable Array_variable;
+typedef struct indexed_variable Indexed_variable;
+typedef struct variable Variable;
+typedef struct iki_tirnak_arasi Iki_tirnak_arasi;
+typedef struct dort_tirnak Dort_tirnak;
+typedef struct character_constant Character_constant;
+typedef struct constant_identifier Constant_identifier;
+typedef struct constant Constant;
+typedef struct parantezli_expression Parantezli_expression;
+typedef struct factor Factor;
+typedef struct carpim_devami Carpim_devami;
+typedef struct term Term;
+typedef struct toplama_devami Toplama_devami;
+typedef struct simple_expression Simple_expression;
+typedef struct complex_expression Complex_expression;
+typedef struct expression Expression;
+typedef struct assignment_statement Assignment_statement;
+typedef struct procedure_identifier Procedure_identifier;
+typedef struct procedure_statement Procedure_statement;
+typedef struct input_variable Input_variable;
+typedef struct output_variable Output_variable;
+typedef struct new_input_variable New_input_variable;
+typedef struct new_output_variable New_output_variable;
+typedef struct read_statement Read_statement;
+typedef struct write_statement Write_statement;
+typedef struct simple_statement Simple_statement;
+typedef struct statement Statement;
+typedef struct if_then If_then;
+typedef struct if_then_else If_then_else;
+typedef struct if_statement If_statement;
+typedef struct while_statement While_statement;
+typedef struct structured_statement Structured_statement;
+typedef struct new_statement New_statement;
+typedef struct compound_statement Compound_statement;
+typedef struct statement_part Statement_part;
+typedef struct block Block;
+typedef struct program Program;
+
+void printf_comment(Comment);
+void printf_empty(Empty);
+void printf_identifier(Identifier);
+void printf_new_identifier(New_identifier);
+void printf_integer_constant(Integer_constant);
+void printf_index_range(Index_range);
+void printf_simple_type(Simple_type);
+void printf_array_type(Array_type);
+void printf_type(Type);
+void printf_variable_declaration(Variable_declaration);
+void printf_new_variable_declaration(New_variable_declaration);
+void printf_variable_declaration_part(Variable_declaration_part);
+void printf_procedure_declaration(Procedure_declaration);
+void printf_new_procedure_declaration_part(New_procedure_declaration_part);
+void printf_procedure_declaration_part(Procedure_declaration_part);
+void printf_variable_identifier(Variable_identifier);
+void printf_entire_variable(Entire_variable);
+void printf_array_variable(Array_variable);
+void printf_indexed_variable(Indexed_variable);
+void printf_variable(Variable);
+void printf_iki_tirnak_arasi(Iki_tirnak_arasi);
+void printf_dort_tirnak(Dort_tirnak);
+void printf_character_constant(Character_constant);
+void printf_constant_identifier(Constant_identifier);
+void printf_constant(Constant);
+void printf_parantezli_expression(Parantezli_expression);
+void printf_factor(Factor);
+void printf_carpim_devami(Carpim_devami);
+void printf_term(Term );
+void printf_toplama_devami(Toplama_devami);
+void printf_simple_expression(Simple_expression );
+void printf_complex_expression(Complex_expression);
+void printf_expression(Expression);
+void printf_assignment_statement(Assignment_statement );
+void printf_procedure_identifier(Procedure_identifier);
+void printf_procedure_statement(Procedure_statement);
+void printf_input_variable(Input_variable);
+void printf_output_variable(Output_variable);
+void printf_new_input_variable(New_input_variable);
+void printf_new_output_variable(New_output_variable);
+void printf_read_statement(Read_statement );
+void printf_write_statement(Write_statement);
+void printf_simple_statement(Simple_statement);
+void printf_if_then(If_then);
+void printf_if_then_else(If_then_else);
+void printf_if_statement(If_statement);
+void printf_while_statement(While_statement);
+void printf_structured_statement(Structured_statement);
+void printf_statement(Statement);
+void printf_new_statement(New_statement);
+void printf_compound_statement(Compound_statement);
+void printf_statement_part(Statement_part);
+void printf_block(Block);
+void printf_program(Program );
+
+struct comment {
+        int kume_parantez_on;//on=1 -> there is '{' else there isn't
+        char *any_character_set;//any character set other than '}'
+        int kume_parantez_off;//off=1 -> there is '}' else there isn't
+};
+struct empty {
+        char *empty;
+};
+struct identifier {
+        char *letter_digit;//<identifier> ::= <letter> { <letter or digit> }
+};
+struct new_identifier {
+        Identifier identifier;
+        int index_no_of_virgul;//index no of special_symbol
+        struct new_identifier *new_identifier;
+};
+struct integer_constant {
+        int digits_constant;
+};
+struct index_range {
+        Integer_constant integer_constant_min;
+        int iki_nokta_yanyana;
+        Integer_constant integer_constant_max;
+};
+struct simple_type {
+        int special_symbol;//index no of special_symbol
+};
+struct array_type {
+        int index_no_of_array;
+        int koseli_parantez_acma;
+        Index_range index_range;
+        int koseli_parantez_kapama;
+        int index_no_of_of;
+        Simple_type simple_type;
+};
+struct type {
+        Simple_type simple_type;
+        Array_type array_type;
+};
+struct variable_declaration {
+        Identifier identifier;
+        New_identifier new_identifier;
+        int iki_nokta_ust_uste;//index no of special_symbol
+        Type type;
+};
+struct new_variable_declaration {
+        Variable_declaration variable_declaration;
+        int index_no_of_n_virgul;//index no of special_symbol
+        New_variable_declaration *new_variable_declaration;
+};
+struct variable_declaration_part {
+        int type;
+        Empty empty;
+        int index_no_of_var;//index no of special_symbol
+        New_variable_declaration new_variable_declaration;
+};
+struct procedure_declaration {
+        int index_no_of_procedure;
+        Identifier identifier;
+        int index_no_of_n_virgul;
+        Block *block;
+};
+struct new_procedure_declaration_part {
+        Procedure_declaration procedure_declaration;
+        int index_no_of_n_virgul;
+        New_procedure_declaration_part *new_procedure_declaration_part;
+};
+struct procedure_declaration_part {
+        New_procedure_declaration_part new_procedure_declaration_part;
+};
+struct variable_identifier {
+        Identifier identifier;
+};
+struct entire_variable {
+        Variable_identifier variable_identifier;
+};
+struct array_variable {
+        Entire_variable entire_variable;
+};
+struct indexed_variable {
+        Array_variable array_variable;
+        int kapali_parantez_on;//index no of special_symbol
+        Expression *expression;
+        int kapali_parantez_off;//index no of special_symbol
+};
+struct variable {
+        int type;
+        Entire_variable entire_variable;
+        Indexed_variable indexed_variable;
+};
+struct iki_tirnak_arasi {
+        int index_no_of_on;//index no of special_symbol
+        char any_character;//any character other than '
+        int index_no_of_off;//index no of special_symbol
+};
+struct dort_tirnak {
+        Empty empty;
+};
+struct character_constant {
+        int type;
+        Iki_tirnak_arasi iki_tirnak_arasi;
+        Dort_tirnak dort_tirnak;
+};
+struct constant_identifier {
+        Identifier identifier;
+};
+struct constant {
+        int type;
+        Integer_constant integer_constant;
+        Character_constant character_constant;
+        Constant_identifier constant_identifier;
+};
+struct parantezli_expression {
+        int parantez_on;//index no of special_symbol
+        Expression *expression;
+        int parantez_off;//index no of special_symbol
+};
+struct factor {
+        int type;
+        Variable variable;
+        Constant constant;
+        Parantezli_expression parantezli_expression;
+        int index_no_of_not;//index no of special_symbol
+        Factor *not_factor;
+};
+struct carpim_devami {
+        int multiplying_operator;
+        Factor factor;
+        Carpim_devami *sonraki_carpim_devami;
+};
+struct term {
+        Factor factor;
+        Carpim_devami carpim_devami;
+};
+struct toplama_devami {
+        int adding_operator;
+        Term term;
+        Toplama_devami *toplama_devami;
+};
+struct simple_expression {
+        int sing_type;
+        Term term;
+        Toplama_devami toplama_devami;
+};
+struct complex_expression {
+        Simple_expression simple_expression_1;
+        int relational_operator_no;
+        Simple_expression simple_expression_2;
+};
+struct expression {
+        int type;
+        Simple_expression simple_expression;
+        Complex_expression complex_expression;
+};
+struct assignment_statement {
+        Variable variable;
+        int index_no_of_define;
+        Expression expression;
+};
+struct procedure_identifier {
+        Identifier identifier;
+};
+struct procedure_statement {
+        Procedure_identifier procedure_identifier;
+};
+struct input_variable {
+        Variable variable;
+};
+struct output_variable {
+        Expression expression;
+};
+struct new_input_variable {
+        int index_no_of_virgul;
+        Input_variable input_variable;
+        New_input_variable *new_input_variable;
+};
+struct new_output_variable {
+        int index_no_of_virgul;
+        Output_variable input_variable;
+        New_output_variable *new_output_variable;
+};
+struct read_statement {
+        int index_no_of_read;
+        int parantez_on;
+        Input_variable input_variable;
+        New_input_variable new_input_variable;
+        int parantez_off;
+};
+struct write_statement {
+        int index_no_of_write;
+        int parantez_on;
+        Output_variable output_variable;
+        New_output_variable new_output_variable;
+        int parantez_off;
+};
+struct simple_statement {
+        Assignment_statement assignment_statement;
+        Procedure_statement procedure_statement;
+        Read_statement read_statement;
+        Write_statement write_statement;
+};
+struct if_then {
+        int index_no_of_if;
+        Expression expression;
+        int index_no_of_then;
+        Statement *statement;
+};
+struct if_then_else {
+        If_then if_then;
+        int index_no_of_else;
+        Statement *statement;
+};
+struct if_statement {
+        int type;
+        If_then if_then;
+        If_then_else if_then_else;
+};
+struct while_statement {
+        int index_no_of_while;
+        Expression expression;
+        int index_no_of_do;
+        Statement *statement;
+};
+struct structured_statement {
+        int type;
+        Compound_statement *compound_statement;
+        If_statement if_statement;
+        While_statement while_statement;
+};
+struct statement {
+        int type;
+        Simple_statement simple_statement;
+        Structured_statement structured_statement;
+};
+struct new_statement {
+        int index_no_of_n_virgul;
+        Statement statement;
+        New_statement *new_statement;
+};
+struct compound_statement {
+        int index_no_of_begin;
+        Statement statement;
+        New_statement new_statement;
+        int index_no_of_end;
+};
+struct statement_part {
+        Compound_statement compound_statement;
+};
+struct block {
+        Variable_declaration_part variable_declaration_part;
+        Procedure_declaration_part procedure_declaration_part;
+        Statement_part statement_part;
+};
+struct program {
+        int index_no_of_program;//index no of special_symbol_1=36
+        Identifier identifier;
+        int index_no_of_n_virgul;//index no of special_symbol_2
+        Block block;
+        int index_no_of_nokta;//index no of special_symbol_3
+};
+int main()
+{
+        Program my_programs[]= {};
+        Comment new_comment;
+        new_comment.any_character_set="mehmetakif";
+        printf_comment(new_comment);
+        my_programs[0].index_no_of_program=36;
+        printf("%s\n",special_symbol[my_programs[0].index_no_of_program]);
+        return 0;
+}
+void printf_comment(Comment comment) {
+    if(comment.kume_parantez_on==0){
+    printf("\n%s\n",yorum_isaretleri[comment.kume_parantez_on]);
+    }
+    printf("%s",comment.any_character_set);
+    if(comment.kume_parantez_on==1){
+    printf("\n%s\n",yorum_isaretleri[comment.kume_parantez_off]);
+    }
+}
+void printf_empty(Empty empty) {
+printf("%s",empty.empty);
+}
+void printf_identifier(Identifier identifier) {
+    
+}
+void printf_new_identifier(New_identifier new_identifier) {
+}
+void printf_integer_constant(Integer_constant integer_constant) {
+}
+void printf_index_range(Index_range index_range) {
+}
+void printf_simple_type(Simple_type simple_type) {
+}
+void printf_array_type(Array_type array_type) {
+}
+void printf_type(Type type) {
+}
+void printf_variable_declaration(Variable_declaration variable_declaration) {
+}
+void printf_new_variable_declaration(New_variable_declaration new_variable_declaration) {
+}
+void printf_variable_declaration_part(Variable_declaration_part variable_declaration_part) {
+}
+void printf_procedure_declaration(Procedure_declaration procedure_declaration) {
+}
+void printf_new_procedure_declaration_part(New_procedure_declaration_part new_procedure_declaration_part) {
+}
+void printf_procedure_declaration_part(Procedure_declaration_part procedure_declaration_part) {
+}
+void printf_variable_identifier(Variable_identifier variable_identifier) {
+}
+void printf_entire_variable(Entire_variable entire_variable) {
+}
+void printf_array_variable(Array_variable array_variable) {
+}
+void printf_indexed_variable(Indexed_variable indexed_variable) {
+}
+void printf_variable(Variable variable) {
+}
+void printf_iki_tirnak_arasi(Iki_tirnak_arasi iki_tirnak_arasi) {
+}
+void printf_dort_tirnak(Dort_tirnak dort_tirnak) {
+}
+void printf_character_constant(Character_constant character_constant) {
+}
+void printf_constant_identifier(Constant_identifier constant_identifier) {
+}
+void printf_constant(Constant constant) {
+}
+void printf_parantezli_expression(Parantezli_expression parantezli_expression) {
+}
+void printf_factor(Factor factor) {
+}
+void printf_carpim_devami(Carpim_devami carpim_devami) {
+}
+void printf_term(Term term) {
+}
+void printf_toplama_devami(Toplama_devami toplama_devami) {
+}
+void printf_simple_expression(Simple_expression simple_expression) {
+}
+void printf_complex_expression(Complex_expression complex_expression) {
+}
+void printf_expression(Expression expression) {
+}
+void printf_assignment_statement(Assignment_statement assignment_statement) {
+}
+void printf_procedure_identifier(Procedure_identifier procedure_identifier) {
+}
+void printf_procedure_statement(Procedure_statement procedure_statement) {
+}
+void printf_input_variable(Input_variable input_variable) {
+}
+void printf_output_variable(Output_variable output_variable) {
+}
+void printf_new_input_variable(New_input_variable new_input_variable) {
+}
+void printf_new_output_variable(New_output_variable new_output_variable) {
+}
+void printf_read_statement(Read_statement read_statement) {
+}
+void printf_write_statement(Write_statement write_statement) {
+}
+void printf_simple_statement(Simple_statement simple_statement) {
+}
+void printf_if_then(If_then if_then) {
+}
+void printf_if_then_else(If_then_else if_then_else) {
+}
+void printf_if_statement(If_statement if_statement) {
+}
+void printf_while_statement(While_statement while_statement) {
+}
+void printf_structured_statement(Structured_statement structured_statement) {
+}
+void printf_statement(Statement statement) {
+}
+void printf_new_statement(New_statement new_statement) {
+}
+void printf_compound_statement(Compound_statement compound_statement) {
+}
+void printf_statement_part(Statement_part statement_part) {
+}
+void printf_block(Block block) {
+}
+void printf_program(Program program) {
+}

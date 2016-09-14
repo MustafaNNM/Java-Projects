@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Movie"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="test.Herbalist_App"/>
+<fullyQualifiedTypeName name="test.Herbalist_AppData"/>
+<fullyQualifiedTypeName name="veri_tabani.Kategori_veri_tabani"/>
+<fullyQualifiedTypeName name="veri_tabani.Bitki_veri_tabani"/>
+<fullyQualifiedTypeName name="veri_tabani.Hastalik_veri_tabani"/>
+<fullyQualifiedTypeName name="agaclar.Vector_Agac"/>
+<fullyQualifiedTypeName name="agac.Node"/>
+<fullyQualifiedTypeName name="hash_table.Hash_Table"/>
+</qualifiedTypeNameHistroy>

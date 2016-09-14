@@ -1,0 +1,10 @@
+1385377733588	Encapsulate field 'amount'
+1385389144852	Inline local variable 'money'
+1385393204397	Delete element
+1385395018400	Extract constant 'REGULAR'
+1385395031270	Extract constant 'NEW_RELEASE'
+1385395522593	Delete element
+1385395525089	Delete element
+1385395527694	Delete element
+1385395640404	Rename method 'test'
+1385396779035	Change method 'Movie'

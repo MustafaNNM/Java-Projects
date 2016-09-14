@@ -1,0 +1,7 @@
+31 Mart 2012
+   released version 1.0.76 of Lexical Analyzer
+
+     Change log:
+        -
+        -
+

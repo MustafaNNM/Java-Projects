@@ -1,0 +1,15 @@
+digged_debug.console=true
+digged_debug.state=true
+digged_nesc_autobrackets=true
+digged_nesc_autoident_strategy=true
+digged_nesc_clean=true
+digged_nesc_enableModifyingOutsideWorkspace=true
+digged_nesc_errorToInfo=true
+digged_nesc_iconsDecorated=true
+digged_nesc_outlineUpdateDelay=true
+digged_nesc_projectCache=true
+digged_nesc_safeFilesAutomatically=true
+digged_nesc_spacesAsTabs=true
+digged_nesc_thumbnail_popup=true
+digged_nesc_useTabsInQuickfix=true
+eclipse.preferences.version=1

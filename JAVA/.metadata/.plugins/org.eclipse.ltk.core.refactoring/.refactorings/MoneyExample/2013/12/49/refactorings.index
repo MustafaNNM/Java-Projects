@@ -1,0 +1,12 @@
+1386208018633	Delete element
+1386208148019	Pull up 'amount' to 'Money'
+1386208267344	Pull up 'amount' to 'Money'
+1386208924830	Pull up 'equals(Object)' to 'Money'
+1386209385606	Pull up 'times(int)' to 'Money'
+1386212233705	Pull up 'times(int)' to 'Money'
+1386214414118	Extract constant 'currency'
+1386214475270	Extract constant 'currency'
+1386215584599	Pull up members to 'Money'
+1386220936874	Pull up 'times(int)' to 'Money'
+1386221960424	Delete element
+1386222022762	Rename type 'bank'

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1362683939 source:c:\users\toshiba\documents\c&&java\kodes\project\deneme\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

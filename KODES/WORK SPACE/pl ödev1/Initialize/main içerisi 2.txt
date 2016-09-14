@@ -1,0 +1,22 @@
+        Index_range *index_range=create_by_name("Index_range");
+        index_range->integer_constant_min=create_by_name("Integer_constant");
+        index_range->integer_constant_min->digits_constant="0";
+        index_range->iki_nokta_yanyana=18;
+        index_range->integer_constant_max=create_by_name("Integer_constant");
+        index_range->integer_constant_max->digits_constant="10";
+        //printf_index_range(index_range);
+
+        Simple_type *simple_type=create_by_name("Simple_type");
+        simple_type->special_symbol=0;
+        //printf_simple_type(simple_type);
+
+        Array_type *array_type=create_by_name("Array_type");
+        array_type->index_no_of_array=34;
+        array_type->kapali_parantez_acma=11;
+        array_type->index_range=create_by_name("Index_range");
+        array_type->index_range=NULL;
+        array_type->kapali_parantez_kapama=12;
+        array_type->index_no_of_of=26;
+        array_type->simple_type=simple_type;
+
+        printf_array_type(array_type);

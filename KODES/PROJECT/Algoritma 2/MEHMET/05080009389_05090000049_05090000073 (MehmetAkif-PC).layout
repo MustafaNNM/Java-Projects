@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="cift_bagli_liste.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="1729" topLine="29" />
+	</File>
+	<File name="cift_bagli_liste.h" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="244" topLine="10" />
+	</File>
+	<File name="personel.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="2222" topLine="17" />
+	</File>
+	<File name="personel.h" open="1" top="0" tabpos="1">
+		<Cursor position="73" topLine="2" />
+	</File>
+	<File name="tarih.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="tarih.h" open="1" top="0" tabpos="2">
+		<Cursor position="274" topLine="0" />
+	</File>
+	<File name="tek_bagli_liste.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="720" topLine="53" />
+	</File>
+	<File name="tek_bagli_liste.h" open="1" top="0" tabpos="3">
+		<Cursor position="225" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,9 @@
+do {
+                        satir_oku(fptr,harfler);
+                        satirlar[x]=create_by_name("Identifier");
+                        satirlar[x]->letter_digit=malloc(sizeof(strlen(harfler)));
+                        strcpy(satirlar[x]->letter_digit,harfler);
+                        satirlar[x]->letter_digit[strlen(harfler)]='\0';
+                        x++;
+                } while(!feof(fptr));
+                

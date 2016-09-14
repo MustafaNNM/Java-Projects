@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1337634624 source:c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\main.cpp
+	<iostream>
+	"ucus.h"
+	"ucus_numarasina_gore_ucus_listesi.h"
+	"kalkis_yerine_gore_ucus_listesi.h"
+
+1337541828 source:c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\string.cpp
+	"string.h"
+	<iostream>
+
+1337541823 c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\string.h
+	<iostream>
+
+1337634415 source:c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\ucus_numarasina_gore_ucus_listesi.cpp
+	"ucus_numarasina_gore_ucus_listesi.h"
+	"ucus.h"
+	<iostream>
+
+1337633317 c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\ucus_numarasina_gore_ucus_listesi.h
+	"ucus.h"
+	<iostream>
+
+1337630971 source:c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\kalkis_yerine_gore_ucus_listesi.cpp
+	"kalkis_yerine_gore_ucus_listesi.h"
+	"ucus.h"
+	<iostream>
+
+1337630713 c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\kalkis_yerine_gore_ucus_listesi.h
+	"ucus.h"
+	<iostream>
+
+1337632920 source:c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\ucus.cpp
+	"ucus.h"
+	<iostream>
+	<iomanip>
+	<cctype>
+
+1337629790 c:\users\toshiba\documents\c&&java\kodes\project\final_ödevi\ucus.h
+	<iostream>
+	<iomanip>
+

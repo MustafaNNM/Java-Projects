@@ -1,0 +1,39 @@
+
+
+
+
+
+               int x=0;
+        int uzunluk=0;
+
+        //satirlar[x]=create_by_name("Identifier");
+        do {
+                satirlar[0]=malloc(sizeof(Identifier));
+        } while(satirlar[0]==NULL);
+
+        do {
+                satirlar[0]->letter_digit=malloc(sizeof(127));
+        } while(satirlar[0]->letter_digit==NULL);
+        printf("metin giriniz?\n");
+        fgets(satirlar[0]->letter_digit,126,fptr);
+        satirlar[0]->letter_digit[126]='\n';
+        printf_identifier(satirlar[x]);
+        while(!feof(fptr)){
+        ++x;
+        do {
+                satirlar[x]=malloc(sizeof(Identifier));
+        } while(satirlar[x]==NULL);
+
+        do {
+                satirlar[x]->letter_digit=malloc(sizeof(127));
+        } while(satirlar[x]->letter_digit==NULL);
+        printf("metin giriniz?\n");
+        fgets(satirlar[x]->letter_digit,126,fptr);
+        satirlar[x]->letter_digit[126]='\n';
+        printf_identifier(satirlar[x]);
+        }
+
+        printf("satirlar okundu\n");
+                printf("\n%s %d satirdan olusmaktadir.\n",dosya_adi,satir_sayisi);
+                //exit(EXIT_FAILURE);
+                exit(EXIT_SUCCESS);

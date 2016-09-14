@@ -1,0 +1,8 @@
+                satirlar[0]=create_by_name("Identifier");
+                {
+                    char b[]= {};
+                    satir_oku(fptr,b);
+                    satirlar[0]->letter_digit=b;
+                }
+                printf_identifier(satirlar[0]);
+                printf("\n");

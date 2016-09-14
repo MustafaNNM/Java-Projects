@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1323452265 source:c:\users\toshiba\documents\c&&java\kodes\project\kapalý sayýlar ve seriler\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

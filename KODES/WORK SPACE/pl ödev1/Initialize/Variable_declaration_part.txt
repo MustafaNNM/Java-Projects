@@ -1,0 +1,6 @@
+        Variable_declaration_part *a=malloc(sizeof(Variable_declaration_part));
+        a->index_no_of_var=33;
+        a->empty=NULL;
+        a->new_variable_declaration=NULL;
+        a->type=-1;
+        printf_variable_declaration_part(a);

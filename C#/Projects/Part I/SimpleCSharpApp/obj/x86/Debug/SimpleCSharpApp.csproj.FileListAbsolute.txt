@@ -1,0 +1,7 @@
+c:\users\toshiba\documents\visual studio 2010\Projects\Part I\Part I\SimpleCSharpApp\bin\Debug\SimpleCSharpApp.exe
+c:\users\toshiba\documents\visual studio 2010\Projects\Part I\Part I\SimpleCSharpApp\bin\Debug\SimpleCSharpApp.pdb
+c:\users\toshiba\documents\visual studio 2010\Projects\Part I\Part I\SimpleCSharpApp\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\toshiba\documents\visual studio 2010\Projects\Part I\Part I\SimpleCSharpApp\obj\x86\Debug\SimpleCSharpApp.exe
+c:\users\toshiba\documents\visual studio 2010\Projects\Part I\Part I\SimpleCSharpApp\obj\x86\Debug\SimpleCSharpApp.pdb
+C:\Users\TOSHIBA\Documents\Visual Studio 2010\Projects\Part I\SimpleCSharpApp\obj\x86\Debug\SimpleCSharpApp.exe
+C:\Users\TOSHIBA\Documents\Visual Studio 2010\Projects\Part I\SimpleCSharpApp\obj\x86\Debug\SimpleCSharpApp.pdb

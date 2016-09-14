@@ -1,0 +1,6 @@
+Comment *comment=malloc(sizeof(Comment));
+comment->kume_parantez_on=0;
+comment->any_character_set="no comment";
+comment->kume_parantez_off=1;
+
+printf_comment(comment);

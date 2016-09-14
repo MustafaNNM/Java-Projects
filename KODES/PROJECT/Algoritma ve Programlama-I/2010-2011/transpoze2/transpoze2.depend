@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1289691965 source:d:\mehmet ak›f\kodes\project\transpoze2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+

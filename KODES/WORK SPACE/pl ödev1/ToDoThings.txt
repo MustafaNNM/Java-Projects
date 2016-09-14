@@ -1,0 +1,12 @@
+((ok)1)printfleri tamamla
+((ok)2)dosyadan okuma yap
+(!!!3)hatalarý yazdýr
+(!4)undeterminated hatasi
+(!5)expected hatalari
+((ok)6.1)nesne oluþturan fonksiyonlar
+(!6.2)creations for each object type
+(!7)nesnelere aktar
+(!8)dosyaya yazdýrma yap
+nesneleri yazdýr
+(!!9)scanfleri tamamla
+((ok)10)(not:sistem deðiþti)

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1298941639 source:d:\kodes\project\charptrdizilidosya yazdýrma\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

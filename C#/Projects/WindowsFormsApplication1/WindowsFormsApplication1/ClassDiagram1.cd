@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WindowsFormsApplication1.Sistem_Yoneticisi">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACIAAAAAAAAAAAABABAAAAQAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Sistem_Yoneticisi.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Etkinlik" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Uye">
+    <Position X="8" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEAAAAAAgAAAAQAABABCQAACAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Uye.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Profil" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Ziyaretci">
+    <Position X="5.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAgAAAAAAABAACQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ziyaretci.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Profil" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Gise_Memuru">
+    <Position X="3.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAABAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Gise_Memuru.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Satis" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Etkinlik">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAQQAAAAAAAABAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Etkinlik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Etkinlik_Listesi">
+    <Position X="3.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Etkinlik_Listesi.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Etkinlik" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Profil">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAABAAAAgAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Profile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Satilan_Biletlerin_Listesi">
+    <Position X="11.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAABAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Satilan_Biletlerin_Listesi.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bilet" />
+      <Property Name="Satis" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Kultur_Merkezi">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAABAAAAAAAAAAAAAAAEAACAAA=</HashCode>
+      <FileName>Kultur_Merkezi.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Gise_Memuru" />
+      <Property Name="Sistem_Yoneticisi" />
+      <Property Name="Etkinlik_Listesi" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Satis">
+    <Position X="8" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Satis.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Odeme" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Odeme">
+    <Position X="8" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAQAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Odeme.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Credi_Karti" />
+      <Property Name="Para" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Para">
+    <Position X="9" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Para.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Credi_Karti">
+    <Position X="7.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Credi_Karti.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Bilet">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bilet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Etkinlik" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

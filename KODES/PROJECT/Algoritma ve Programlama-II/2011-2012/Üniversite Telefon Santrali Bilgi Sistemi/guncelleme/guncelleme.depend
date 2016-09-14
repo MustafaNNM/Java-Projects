@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1300915231 source:d:\kodes\project\guncelleme\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1300915231 source:d:\kodes\project\odev 2\guncelleme\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

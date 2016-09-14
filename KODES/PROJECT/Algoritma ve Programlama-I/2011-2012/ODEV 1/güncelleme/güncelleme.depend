@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1300049287 source:d:\kodes\project\güncelleme\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1300052086 source:d:\kodes\project\odev 1\güncelleme\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

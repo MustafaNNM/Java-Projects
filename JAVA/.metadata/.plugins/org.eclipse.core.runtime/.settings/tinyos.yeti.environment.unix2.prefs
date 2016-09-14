@@ -1,0 +1,14 @@
+digged_architecture.default=true
+digged_architecture.override=true
+digged_architecture.user=true
+digged_do.not.ask.environment.variables=true
+digged_environment_variables.general=true
+digged_includes.gcc=true
+digged_makeincludes.general=true
+digged_tos.apps=true
+digged_tos.dir=true
+digged_tos.makerules=true
+digged_tos.root=true
+digged_tos.treeLayout=true
+do.not.ask.environment.variables=true
+eclipse.preferences.version=1

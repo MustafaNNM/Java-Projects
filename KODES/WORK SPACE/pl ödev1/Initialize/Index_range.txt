@@ -1,0 +1,7 @@
+Index_range *index_range=create_by_name("Index_range");
+index_range->integer_constant_min=create_by_name("Integer_constant");
+index_range->integer_constant_min->digits_constant="0";
+index_range->iki_nokta_yanyana=18;
+index_range->integer_constant_max=create_by_name("Integer_constant");
+index_range->integer_constant_max->digits_constant="10";
+printf_index_range(index_range);

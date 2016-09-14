@@ -1,0 +1,5 @@
+1111111Devlet Hastanesi         Alsancak                      3 1250
+1234567Ali Kaya                 Susam Sok. No:19 D:5 Bornova  1 100
+1555777Alsat Pazarlama          Kemeraltý                     2 250
+2222222Ali Kaya                 Sakarya Cad. No:2 D:2 Buca    1 0
+5555555Merkez Karakol           Bornova                       4 0

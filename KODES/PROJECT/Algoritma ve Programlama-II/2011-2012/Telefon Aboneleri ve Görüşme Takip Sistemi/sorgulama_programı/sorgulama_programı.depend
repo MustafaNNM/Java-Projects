@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1300060804 source:d:\kodes\project\sorgulama_programý\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1300964157 source:d:\kodes\project\odev 1\sorgulama_programý\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

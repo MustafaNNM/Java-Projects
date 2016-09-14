@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1287481167 source:d:\mehmet ak›f\kodes\project\otel\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

@@ -1,0 +1,3 @@
+Program my_programs[]= {};
+my_programs[0].index_no_of_program=36;
+        printf("%s\n",special_symbol[my_programs[0].index_no_of_program]);

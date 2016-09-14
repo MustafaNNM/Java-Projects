@@ -1,0 +1,17 @@
+digged_architecture.default=true
+digged_architecture.override=true
+digged_architecture.user=true
+digged_cygwin.bash=true
+digged_cygwin.cygpath=true
+digged_cygwin.root=true
+digged_environment_variables.general=true
+digged_includes.gcc=true
+digged_makeincludes.general=true
+digged_tos.apps=true
+digged_tos.dir=true
+digged_tos.makerules=true
+digged_tos.root=true
+digged_tos.tree=true
+digged_translator=true
+eclipse.preferences.version=1
+makeincludes.general=v2.0.

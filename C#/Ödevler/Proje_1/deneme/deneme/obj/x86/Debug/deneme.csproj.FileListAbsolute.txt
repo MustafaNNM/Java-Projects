@@ -1,0 +1,9 @@
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\obj\x86\Debug\deneme.Form1.resources
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\obj\x86\Debug\deneme.Properties.Resources.resources
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\bin\Debug\deneme.exe
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\bin\Debug\deneme.pdb
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\obj\x86\Debug\deneme.exe
+c:\users\toshiba\documents\visual studio 2010\Odevler\Proje_1\deneme\deneme\obj\x86\Debug\deneme.pdb

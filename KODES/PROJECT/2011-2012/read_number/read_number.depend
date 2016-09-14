@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1349286165 source:c:\users\toshiba\documents\c&&java\kodes\project\read_number\main.c
+	<stdio.h>
+	<stdlib.h>
+

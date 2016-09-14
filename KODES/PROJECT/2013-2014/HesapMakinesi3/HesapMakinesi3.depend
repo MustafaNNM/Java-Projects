@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1362515304 source:c:\users\toshiba\documents\c&&java\kodes\project\hesapmakinesi3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<math.h>
+

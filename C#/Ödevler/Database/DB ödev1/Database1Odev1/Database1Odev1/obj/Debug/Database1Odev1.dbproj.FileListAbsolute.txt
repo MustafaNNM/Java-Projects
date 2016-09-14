@@ -1,0 +1,8 @@
+C:\Users\Bahar\Documents\Visual Studio 2010\Projects\Database1Odev1\Database1Odev1\sql\debug\Database1Odev1_Script.PreDeployment.sql
+C:\Users\Bahar\Documents\Visual Studio 2010\Projects\Database1Odev1\Database1Odev1\sql\debug\Database1Odev1_Script.PostDeployment.sql
+C:\Users\Bahar\Documents\Visual Studio 2010\Projects\Database1Odev1\Database1Odev1\sql\debug\Database1Odev1_Database.sqlsettings
+C:\Users\Bahar\Documents\Visual Studio 2010\Projects\Database1Odev1\Database1Odev1\sql\debug\Database1Odev1_Database.sqldeployment
+C:\Users\Bahar\Documents\Visual Studio 2010\Projects\Database1Odev1\Database1Odev1\sql\debug\Database1Odev1_Database.sqlcmdvars
+C:\Users\Bahar\Documents\Visual Studio 2010\Projects\Database1Odev1\Database1Odev1\sql\debug\Database1Odev1.deploymanifest
+C:\Users\Bahar\Documents\Visual Studio 2010\Projects\Database1Odev1\Database1Odev1\sql\debug\Database1Odev1.dbschema
+C:\Users\Bahar\Documents\Visual Studio 2010\Projects\Database1Odev1\Database1Odev1\obj\Debug\Database1Odev1.dbschema
