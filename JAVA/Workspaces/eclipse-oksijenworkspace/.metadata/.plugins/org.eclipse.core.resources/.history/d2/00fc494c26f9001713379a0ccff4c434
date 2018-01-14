@@ -1,0 +1,21 @@
+public class Balon {
+	public int no;
+	private String renk;
+	public Balon sonraki;
+
+	Renkler renk_listesi = new Renkler(new String[] { "yavru aðzý", "cam göbeði", "van dyke kahverengisi",
+			"hint sarýsý", "alizarin kýrmýzýsý", "kadmiyum sarýsý",
+			"gece yarýsý siyahý", "prusya mavisi", "titanyum beyazý",
+			"koyu siena" });
+
+	public Balon(int no) {
+		this.no = no;
+		
+		this.renk = renk_listesi.renkler[(int) (Math.random() * renk_listesi.renkler.length)];
+	}
+
+	public void yazdir() {
+		System.out.println("Balonun numarasý:" + no + "\t" + "Balonun rengi:"
+				+ renk);
+	}
+}

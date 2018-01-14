@@ -1,0 +1,15 @@
+public class Balon {
+	public int no;
+	private String renk;
+	public Balon sonraki;
+
+	public Balon(int no) {
+		this.no = no;
+		this.renk = Renkler.random_renk();
+	}
+
+	public void yazdir() {
+		System.out.println("Balonun numarasý:" + no + "\t" + "Balonun rengi:"
+				+ renk);
+	}
+}

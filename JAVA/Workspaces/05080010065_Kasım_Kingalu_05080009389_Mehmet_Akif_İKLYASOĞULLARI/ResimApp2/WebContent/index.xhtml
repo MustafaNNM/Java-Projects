@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+  <title>Photo Gallery</title>
+  <link type="text/css" rel="stylesheet" href="C:/Users/MehmetAkif-PC/workspace/ResimApp2/WebContent/asset/lightbox/css/lightbox.min.css"/>
+  <script type="text/javascript"
+	   src="C:/Users/MehmetAkif-PC/workspace/ResimApp2/WebContent/asset/lightbox/js/lightbox.min.js">
+	</script>
+  
+  
+  <style type="text/css">
+  #gallery { margin:0;padding:0; list-style:none}
+  #gallery li {float:left; margin:5px}
+  #gallery li img {border:2px solid #cccccc}
+  #addForm{float:left; clear:left}
+     
+  
+  </style>
+</h:head>
+
+<h:body>
+
+<div id="header">
+   <h1>My Gallery</h1>
+</div>
+<div id="content">
+ <h3>Flowers</h3>
+	 <ul id="gallery">
+	         <ui:repeat value="#{gallery.dosyalar}" var="item" >
+		        <li><img src="#{item}" alt="" width="300" height="200"/></li> 
+		    </ui:repeat>
+	  </ul> 
+  </div>
+
+<div id="footer">
+
+</div>
+
+</h:body>
+
+</html>

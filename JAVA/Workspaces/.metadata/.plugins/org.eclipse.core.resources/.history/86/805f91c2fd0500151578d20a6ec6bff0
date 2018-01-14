@@ -1,0 +1,9 @@
+
+public class Sale {
+
+	public void becomeComplete() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

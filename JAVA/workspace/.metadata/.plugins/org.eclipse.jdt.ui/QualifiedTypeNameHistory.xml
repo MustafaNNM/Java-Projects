@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="java.awt.geom.RoundRectangle2D"/>
+<fullyQualifiedTypeName name="java.awt.geom.Arc2D"/>
+<fullyQualifiedTypeName name="java.awt.Graphics2D"/>
+<fullyQualifiedTypeName name="java.awt.geom.Ellipse2D"/>
+<fullyQualifiedTypeName name="java.awt.geom.Ellipse2D.Double"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="java.awt.geom.Rectangle2D"/>
+<fullyQualifiedTypeName name="ağaç.Ağaç"/>
+<fullyQualifiedTypeName name="deva.Bitki"/>
+<fullyQualifiedTypeName name="veri_tabanı.bitki_verilerini_oku"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="ağaçlar.Vector_Ağaç"/>
+<fullyQualifiedTypeName name="veri_tabanı.Kategori_veri_tabanı"/>
+<fullyQualifiedTypeName name="hash_table.Hash_Table"/>
+<fullyQualifiedTypeName name="veri_tabanı.Hastalık_veri_tabanı"/>
+<fullyQualifiedTypeName name="deva.Kategori"/>
+<fullyQualifiedTypeName name="ağaç.Node"/>
+<fullyQualifiedTypeName name="dert.Hastalık"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.File"/>
+</qualifiedTypeNameHistroy>

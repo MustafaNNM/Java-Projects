@@ -1,0 +1,8 @@
+
+public class Renkler {
+	public String[] renkler;
+
+	public Renkler(String[] renkler) {
+		this.renkler = renkler;
+	}
+}

@@ -1,0 +1,20 @@
+package denemeyedevam;
+
+import org.eclipse.jetty.server.Server;
+
+public  class CNDApp{
+	HelloWorld helloWorld=new HelloWorld();
+	public static void main(String[] args) throws Exception {
+		HelloWorld helloWorld=new HelloWorld();
+		int port=8080;
+		Server server=new Server(port);
+		server.setHandler(helloWorld);
+		server.start();
+		server.join();
+	}
+
+	public CNDApp() {
+		super();
+	}
+
+}

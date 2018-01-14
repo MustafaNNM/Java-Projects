@@ -1,0 +1,8 @@
+
+public class ProductSpecification {
+
+	public ProductSpecification(ItemID id1, Money price, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

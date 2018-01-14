@@ -1,0 +1,95 @@
+public class BListe {
+	Balon etkin = null;
+	int katNumarasý;
+
+	public BListe(int katNumarasý) {// constructor
+		this.katNumarasý = katNumarasý;
+		etkin = null;
+	}
+
+	public void Ekle(int no) {// baðlý diziye eleman ekler.
+		if (etkin == null) {// liste yeni yaratýlýyorsa;
+			Balon yeniBalon = new Balon(no);
+			etkin = yeniBalon;
+			etkin.setSonraki(etkin);// baðlý listeyi dairesel hale getirmek için
+		} else {// listede birden fazla eleman varsa;
+			Balon yeniBalon = new Balon(no);
+			Balon simdiki = etkin, gecici = etkin;
+			do {
+				gecici = gecici.getSonraki();
+				simdiki = gecici.getSonraki();
+			} while (simdiki != etkin);
+			gecici.setSonraki(yeniBalon);
+			yeniBalon.setSonraki(etkin);
+		}
+	}
+
+	public void patlat(int n) {
+		Balon kaldi = etkin.getSonraki();// silinecek olan balon
+		if (n == 1) {// eðer balonlarý teker teker silmemiz isteniyorsa
+			while (kaldi.getSonraki() != etkin) {
+				kaldi = kaldi.getSonraki();
+			}
+			System.out.println(katNumarasý + ".kattaki " + n + ".sýradaki balonlar patlatýlmaktadýr. "
+					+ "\nListedeki balonlar:\n");
+			System.out.println(toString());
+			while (doluMu()) {
+				System.out.println("\nSilinen; ");
+				System.out.println(etkin.toString());
+				kaldi.setSonraki(etkin.getSonraki());
+				etkin = etkin.getSonraki();
+				System.out.println("\nListedeki balonlar:\n");
+				System.out.println(toString());
+			}
+		} else {
+			System.out.print(
+					"\n" + katNumarasý + ".katta ilk balondan itibaren her " + n + ".balon patlatýlmaktadýr.\n\n");
+			while (doluMu()) {
+				System.out.println(katNumarasý + ".katta kalan balonlar:");
+				System.out.println(toString());
+				int sayac = 1;
+				while (sayac < n - 1) {// n defa dönmek için..
+					sayac++;
+					etkin = etkin.getSonraki();
+					kaldi = kaldi.getSonraki();
+				}
+				System.out.println("\n" + katNumarasý + ".katta " + "patlatýlan; ");
+				System.out.println(kaldi.toString());// her turda kat numarasý ve n deðerinin
+				// yazdýrýlmasý
+				// istenmiþtir.
+				System.out.println();// bir satýr alta geçelim
+				etkin.setSonraki(kaldi.getSonraki());
+				etkin = etkin.getSonraki();
+				kaldi = kaldi.getSonraki().getSonraki();
+			} // döngüden çýkýldýðýnda elimizde sadece bir balon kalmýþ
+				// olacaktýr.
+		}
+		System.out.println("\n\n" + katNumarasý + ".katta " + "kalan;\t");
+		System.out.println(etkin.toString());// onu da ekrana yazdýralým.
+	}
+
+	public String toString() {
+		String balonlar="";
+		Balon dolas;// listemiz dairesel olduðu için sonuna gelinip
+		// gelinmediðini anlamak için ayrýca bir balon oluþturmak
+		// lazýmdýr.
+		dolas = etkin;
+		do {
+			balonlar+=dolas.toString()+"\n";// ve dolaþýrken elemanlarý balon sýnýfýnda bulunan
+			// yazdýr yardýmýyla teker teker yazdýrýr.
+			dolas = dolas.getSonraki();
+		} while (dolas != etkin);
+		return balonlar;
+	}
+
+	public boolean doluMu() {// patlat metodu için gereklidir.
+		if (etkin == etkin.getSonraki()) {// etkin kendine eþit olduðunda
+											// yani baðlý listede sadece bir balon kaldýðýnda
+											// doluMu sorusuna "hayýr boþ" yanýtýný verir
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+}

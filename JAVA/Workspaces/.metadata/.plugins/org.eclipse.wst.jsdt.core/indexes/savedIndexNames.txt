@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\Users\MehmetAkif-PC\Workspaces\oxygenworkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

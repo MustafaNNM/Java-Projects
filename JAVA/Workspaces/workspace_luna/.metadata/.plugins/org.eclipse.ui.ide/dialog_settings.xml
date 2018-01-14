@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="F:\sexercise\denemeyedevam"/>
+			<item value="C:\Users\TOSHIBA\Documents\C&amp;&amp;C++&amp;&amp;C#&amp;&amp;Java\JAVA"/>
+			<item value="C:\Users\TOSHIBA\workspace\Herbalife POS"/>
+			<item value="C:\Users\TOSHIBA\Documents\4. Sınıf Dersleri\2. Dönem\Sunucu Yazılım"/>
+			<item value="C:\Users\TOSHIBA\Google Drive\C&amp;&amp;Java\JAVA\2.sınıf\ECLİPSE\Herbalist kod ve rapor"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

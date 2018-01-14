@@ -1,0 +1,19 @@
+1410510709942	Extract method 'belirtileri_ekle'
+1410510733685	Extract method 'nedenleri_ekle'
+1410510781000	Extract method 'tedavi_yontemlerini_ekle'
+1410510827816	Extract method 'onerilen_bitkileri_ekle'
+1410510927110	Extract method 'hastalikla_ilgili_bilgileri_ekle'
+1410511002006	Extract method 'degiskenler_icin_hafizadan_yer_ayırt'
+1410511077485	Extract method 'ozellikleri_ekle'
+1410511352186	Extract method 'kategoride_bulunamadi'
+1410511420031	Extract method 'degiskenler_icin_hafizadan_alan_ayirt'
+1410512957507	Rename method 'getJPanel6'
+1410513976532	Extract Class...
+1410514094203	Delete element
+1410514287177	Extract method 'appgui'
+1410515399661	Move compilation unit
+1410515716498	Delete element
+1410515782798	Move member 'appgui'
+1410515958735	Convert local variable 'form1' to field
+1410515979764	Encapsulate field 'form1'
+1410516936665	Move compilation unit

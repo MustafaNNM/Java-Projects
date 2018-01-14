@@ -1,0 +1,14 @@
+1491785916083	Encapsulate field 'async_server'
+1491785920154	Encapsulate field 'myserver'
+1492304191701	Delete element
+1492304197125	Delete element
+1492304941234	Delete element
+1492305786227	Copy compilation unit
+1492305793155	Convert local variable 'ChatRoomApplet' to field
+1492305807691	Encapsulate field 'chatRoomApplet'
+1492305843356	Delete element
+1492310979659	Copy compilation unit
+1492343821174	Extract superclass 'ChatRoomGUI'
+1492345483007	Rename field 'lblNewLabel'
+1492345525248	Rename field 'ChatRoomApplet'
+1492345575443	Rename field 'lblKullanclar'

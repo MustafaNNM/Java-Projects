@@ -1,0 +1,4 @@
+1490875833623	Encapsulate field 'count'
+1490876451725	Convert local variable 'counter' to field
+1490876457503	Encapsulate field 'counter'
+1490876746350	Extract method 'yuz_defa_arttir'

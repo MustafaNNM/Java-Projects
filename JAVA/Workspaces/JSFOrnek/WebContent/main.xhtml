@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Anasayfa - Kitap Listesi</title>
+</h:head>
+<body>
+	<f:view>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="40px"><div align="center" class="welcome">
+						Hoş geldiniz,
+						<h:outputText value="#{userBean.name}"></h:outputText>
+						<br /> <br />Mevcut bulunan tüm kitaplar aşağıdadır...
+					</div></td>
+			</tr>
+			<tr>
+				<td valign="top"><div align="center">
+						<h:form id="bookList">
+							<h:dataTable id="books" value="#{bookListBean.books}" var="book"
+								border="1" rowClasses="evenColumn,oddColumn" cellpadding="2"
+								cellspacing="1">
+								<h:column headerClass="header">
+									<f:facet name="header">
+										<h:outputText value="Author" />
+									</f:facet>
+									<h:outputText styleClass="table" value="#{book.author}" />
+								</h:column>
+								<h:column headerClass="header">
+									<f:facet name="header">
+										<h:outputText value="Title" />
+									</f:facet>
+									<h:outputText styleClass="table" value="#{book.title}" />
+								</h:column>
+								<h:column headerClass="header">
+									<f:facet name="header">
+										<h:outputText value="Borrow" />
+									</f:facet>
+									<h:commandButton styleClass="button" id="borrow" action="info"
+										actionListener="#{bookBean.borrowBook}" value="Borrow"
+										disabled="#{!book.available}">
+										<f:param id="borrowId" value="#{book.id}" />
+										<f:param id="user" value="#{userBean.name}" />
+									</h:commandButton>
+								</h:column>
+							</h:dataTable>
+						</h:form>
+					</div></td>
+			</tr>
+		</table>
+	</f:view>
+</body>
+</html>

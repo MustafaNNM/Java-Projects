@@ -1,0 +1,10 @@
+anonymizeMessages=true
+configured=true
+disableAutomaticWiringAnalysis=false
+eclipse.preferences.version=1
+reporterName=MEHMET
+resetSendMode=KEEP
+resetSendModeOn=0
+sendMode=BACKGROUND
+servers/com.genuitec.eclipse.aeri.server/configured=true
+servers/org.eclipse.epp.logging.aeri.ide.server/configured=true

@@ -1,0 +1,155 @@
+package denemeyedevam;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.imageio.IIOException;
+import javax.imageio.ImageIO;
+import javax.servlet.ServletException;
+
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Enumeration;
+
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.handler.AbstractHandler;
+
+public class HelloWorld extends AbstractHandler {
+	private static int IMG_WIDTH = 500;
+	private static int IMG_HEIGHT = 500;
+	private static String IMG_COLOR = "DEFAULT";
+	boolean hata_var_mý = false;
+	String images_folder_path = "C:\\Users\\MehmetAkif-PC\\Google Drive\\Google Foto\\bihap\\";
+	String image_name = "anime_girl_12-wallpaper-2560x1440.jpg";
+
+	// BufferedImage createResizedCopy()
+	private static BufferedImage resizeImage(BufferedImage originalImage, int type) {
+		BufferedImage resizedImage = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, type);
+		Graphics2D g = resizedImage.createGraphics();
+		g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
+		g.dispose();
+
+		return resizedImage;
+	}
+
+	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		response.setContentType("text/html;charset=utf-8");
+		// response.getOutputStream().println("<h1>Bismillahirrahmanirrahim</h1>");
+		Enumeration<String> parameterNames = request.getParameterNames();
+		while (parameterNames.hasMoreElements()) {
+			
+			String name = (String) parameterNames.nextElement();
+			String value = request.getParameter(name).toString();
+			// response.getWriter().write(String.format("%s==%s\n",name,value));
+			System.out.println(String.format("%s==%s\n", name, value));
+			if (name.startsWith("width")) {
+				IMG_WIDTH = Integer.parseInt(request.getParameter(name));
+				if(IMG_WIDTH>0) {
+					System.out.println("geniþlik:" + IMG_WIDTH);
+					continue;
+				}
+				else {
+					hata_var_mý = true;
+					response.setStatus(HttpServletResponse.SC_REQUESTED_RANGE_NOT_SATISFIABLE);
+					baseRequest.setHandled(false);
+					return;
+				}
+				// response.getWriter().println("geniþlik:"+width);
+			} else {
+				if (name.startsWith("height")) {
+					IMG_HEIGHT = Integer.parseInt(request.getParameter(name));
+					if(IMG_HEIGHT>0) {
+						System.out.println("yükseklik:" + IMG_HEIGHT);
+						continue;
+					}
+					else {
+						hata_var_mý = true;
+						response.setStatus(HttpServletResponse.SC_REQUESTED_RANGE_NOT_SATISFIABLE);
+						baseRequest.setHandled(false);
+						return;
+					}
+					// response.getWriter().println("geniþlik:"+width);
+				} else {
+					if (name.startsWith("color")) {
+						setIMG_COLOR(request.getParameter(name));
+						if(IMG_COLOR.startsWith("GRAY")) {
+							System.out.println("renk:" + IMG_COLOR);
+							continue;
+						}
+						else {
+							hata_var_mý = true;
+							response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
+							baseRequest.setHandled(false);
+							return;
+						}
+						// response.getWriter().println("geniþlik:"+width);
+					} else {
+						hata_var_mý = true;
+						System.out.println("bilinmeyen paramatre");
+						response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
+						baseRequest.setHandled(false);
+						return;
+					}
+				}
+			}
+		}
+		
+		if(hata_var_mý==false) {
+			
+		}else {
+			response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
+			baseRequest.setHandled(false);
+			return;
+		}
+		BufferedImage originalImage = null;
+		try {
+			originalImage = ImageIO.read(new File("" + images_folder_path + image_name));
+		} catch (IIOException e) {
+			hata_var_mý = true;
+			e.printStackTrace();
+		}
+		if (hata_var_mý == false) {
+			response.setHeader("Content-Type", "image/jpg");// or png or gif, etc
+			int type = originalImage.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
+			originalImage = resizeImage(originalImage, type);
+			ImageIO.write(originalImage, "jpg", response.getOutputStream());
+
+			// }
+			// }
+			baseRequest.setHandled(true);
+			// response.getOutputStream().close();
+			// response.sendRedirect("http://www.google.com");
+			// response.getWriter().println("<h1>Bismillahirrahmanirrahim</h1>");
+			response.setStatus(HttpServletResponse.SC_OK);
+		} else {
+			response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+			baseRequest.setHandled(false);
+		}
+
+		return;
+	}
+
+	public static void main(String[] args) throws Exception {
+		Server server = new Server(8080);
+		server.setHandler(new HelloWorld());
+		server.start();
+		server.join();
+	}
+
+	/**
+	 * @return the iMG_COLOR
+	 */
+	public static String getIMG_COLOR() {
+		return IMG_COLOR;
+	}
+
+	/**
+	 * @param iMG_COLOR the iMG_COLOR to set
+	 */
+	public static void setIMG_COLOR(String iMG_COLOR) {
+		IMG_COLOR = iMG_COLOR;
+	}
+}

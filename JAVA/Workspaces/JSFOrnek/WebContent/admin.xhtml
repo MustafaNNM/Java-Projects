@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Admin Sayfası</title>
+</h:head>
+
+<body>
+	<f:view>
+		<table border="1">
+			<tr>
+				<td height="40px"><div align="center" class="welcome">
+						Admin sayfasına hoş geldiniz,<br /> <br />Mevcut bulunan tüm
+						kitaplar aşağıdadır...
+					</div></td>
+			</tr>
+			<tr>
+				<td valign="top"><div align="center">
+						<h:form id="bookList">
+							<h:dataTable id="books" value="#{bookListBean.books}" var="book"
+								border="0" rowClasses="evenColumn,oddColumn" cellpadding="2"
+								cellspacing="1">
+								<h:column headerClass="header">
+									<f:facet name="header">
+										<h:outputText value="Yazar" />
+									</f:facet>
+									<h:outputText styleClass="table" value="#{book.author}" />
+								</h:column>
+								<h:column headerClass="header">
+									<f:facet name="header">
+										<h:outputText value="Kitap Adı" />
+									</f:facet>
+									<h:outputText styleClass="table" value="#{book.title}" />
+								</h:column>
+								<h:column headerClass="header">
+									<f:facet name="header">
+										<h:outputText value="Durum" />
+									</f:facet>
+									<h:outputText styleClass="table" value="#{book.owner}" />
+								</h:column>
+								<h:column headerClass="header">
+									<f:facet name="header">
+										<h:outputText value="Düzenle" />
+									</f:facet>
+									<h:commandLink id="Edit" action="editBook"
+										actionListener="#{bookBean.selectBook}">
+										<h:outputText value="Düzenle" />
+										<f:param id="editId" name="id" value="#{book.id}" />
+									</h:commandLink>
+								</h:column>
+								<h:column headerClass="header">
+									<f:facet name="header">
+										<h:outputText value="Sil" />
+									</f:facet>
+									<h:commandLink id="Delete" action="admin"
+										actionListener="#{bookBean.deleteBook}">
+										<h:outputText value="Sil" />
+										<f:param id="deleteId" name="id" value="#{book.id}" />
+									</h:commandLink>
+								</h:column>
+							</h:dataTable>
+
+							<h:commandLink id="Add" action="editBook"
+								actionListener="#{bookBean.initBook}">
+								<h:outputText value="Yeni bir kitap ekle" />
+							</h:commandLink>
+						</h:form>
+					</div></td>
+			</tr>
+		</table>
+	</f:view>
+</body>
+</html>

@@ -1,0 +1,4 @@
+1491701738854	Encapsulate field 'socket'
+1491703657295	Convert local variable 'net' to field
+1491703662425	Encapsulate field 'net'
+1491709007675	Copy compilation unit

@@ -1,0 +1,11 @@
+
+public class Renkler {
+	public String[] renkler=new String[] { "yavru aðzý", "cam göbeði", "van dyke kahverengisi",
+			"hint sarýsý", "alizarin kýrmýzýsý", "kadmiyum sarýsý",
+			"gece yarýsý siyahý", "prusya mavisi", "titanyum beyazý",
+			"koyu siena" };
+
+	public Renkler(String[] renkler) {
+		this.renkler = renkler;
+	}
+}
