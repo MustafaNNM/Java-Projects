@@ -1,9 +1,0 @@
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\bin\Debug\tıklama ile doğru çizdirme.exe
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\bin\Debug\tıklama ile doğru çizdirme.pdb
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\obj\x86\Debug\tıklama_ile_doğru_çizdirme.Form1.resources
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\obj\x86\Debug\tıklama_ile_doğru_çizdirme.Properties.Resources.resources
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\obj\x86\Debug\GenerateResource.read.1.tlog
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\obj\x86\Debug\GenerateResource.write.1.tlog
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\obj\x86\Debug\tıklama ile doğru çizdirme.exe
-c:\users\toshiba\documents\visual studio 2010\Ödevler\tıklama ile doğru çizdirme\tıklama ile doğru çizdirme\obj\x86\Debug\tıklama ile doğru çizdirme.pdb

@@ -1,3 +1,0 @@
-Identifier *identifier=malloc(sizeof(Identifier));
-identifier->letter_digit="tanimlayici";
-printf_identifier(identifier);

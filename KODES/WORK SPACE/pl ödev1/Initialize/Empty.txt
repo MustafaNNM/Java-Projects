@@ -1,3 +1,0 @@
- Empty *bos=malloc(sizeof(Empty));
-        bos->empty="normaly bos\0\n";
-        printf_empty(bos);

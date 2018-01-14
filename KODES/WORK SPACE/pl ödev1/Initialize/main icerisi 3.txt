@@ -1,8 +1,0 @@
-a='a';
-            b='b';
-            if(a==b){
-            printf("a:%c b:%c",a,b);
-            }
-            else{
-            printf("a:%c b:%c",a,b);
-            }

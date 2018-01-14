@@ -1,3 +1,0 @@
-Integer_constant *integer_constant=create_by_name("Integer_constant");
-integer_constant->digits_constant="41152725";
-printf_integer_constant(integer_constant);

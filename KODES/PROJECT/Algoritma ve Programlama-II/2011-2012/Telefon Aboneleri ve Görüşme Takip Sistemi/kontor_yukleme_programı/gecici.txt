@@ -1,5 +1,0 @@
-1111111 Devlet Hastanesi          Alsancak                       3 1250
-1234567 Ali Kaya                  Susam Sok. No:19 D:5 Bornova   1 300
-1555777 Alsat Pazarlama           Kemeraltý                      2 300
-2222222 Ali Kaya                  Sakarya Cad. No:2 D:2 Buca     1 60
-5555555 Merkez Karakol            Bornova                        4 0

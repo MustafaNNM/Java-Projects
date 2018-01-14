@@ -1,5 +1,0 @@
-0628894  Mehmet                     Bayraklç                     4 100
-1234567  Ali Kaya                   Susam Sok. No:19 D:5 Bornova 1 100
-1555777  Alsat Pazarlama            Kemeralt˝                    2 250
-2222222  Ali Kaya                   Sakarya Cad. No:2 D:2 Buca   1 0
-5555555  Merkez Karakol           Bornova mmigros                4 0

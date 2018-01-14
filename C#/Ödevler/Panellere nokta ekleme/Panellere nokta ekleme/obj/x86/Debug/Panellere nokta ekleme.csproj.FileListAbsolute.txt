@@ -1,9 +1,0 @@
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\bin\Debug\Panellere nokta ekleme.exe
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\bin\Debug\Panellere nokta ekleme.pdb
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\obj\x86\Debug\Panellere_nokta_ekleme.Form1.resources
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\obj\x86\Debug\Panellere_nokta_ekleme.Properties.Resources.resources
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\obj\x86\Debug\GenerateResource.read.1.tlog
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\obj\x86\Debug\GenerateResource.write.1.tlog
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\obj\x86\Debug\Panellere nokta ekleme.exe
-c:\users\toshiba\documents\visual studio 2010\Ödevler\Panellere nokta ekleme\Panellere nokta ekleme\obj\x86\Debug\Panellere nokta ekleme.pdb

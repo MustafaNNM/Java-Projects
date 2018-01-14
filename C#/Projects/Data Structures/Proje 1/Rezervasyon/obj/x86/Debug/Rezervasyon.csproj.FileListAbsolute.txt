@@ -1,5 +1,0 @@
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Proje 1\Rezervasyon\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Proje 1\Rezervasyon\bin\Debug\Rezervasyon.exe
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Proje 1\Rezervasyon\bin\Debug\Rezervasyon.pdb
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Proje 1\Rezervasyon\obj\x86\Debug\Rezervasyon.exe
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Proje 1\Rezervasyon\obj\x86\Debug\Rezervasyon.pdb

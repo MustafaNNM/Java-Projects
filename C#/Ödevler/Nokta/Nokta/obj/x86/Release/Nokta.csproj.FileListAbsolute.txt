@@ -1,9 +1,0 @@
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\bin\Release\Nokta.exe
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\bin\Release\Nokta.pdb
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\obj\x86\Release\ResolveAssemblyReference.cache
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\obj\x86\Release\Nokta.Form1.resources
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\obj\x86\Release\Nokta.Properties.Resources.resources
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\obj\x86\Release\GenerateResource.read.1.tlog
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\obj\x86\Release\GenerateResource.write.1.tlog
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\obj\x86\Release\Nokta.exe
-c:\Users\TOSHIBA\Documents\Visual Studio 2010\Ödevler\Nokta\Nokta\obj\x86\Release\Nokta.pdb

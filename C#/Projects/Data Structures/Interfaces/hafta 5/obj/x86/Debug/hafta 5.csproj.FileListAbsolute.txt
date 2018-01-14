@@ -1,8 +1,0 @@
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Interfaces\hafta 5\bin\Debug\hafta 5.exe
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Interfaces\hafta 5\bin\Debug\hafta 5.pdb
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Interfaces\hafta 5\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Interfaces\hafta 5\obj\x86\Debug\hafta_5.Properties.Resources.resources
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Interfaces\hafta 5\obj\x86\Debug\GenerateResource.read.1.tlog
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Interfaces\hafta 5\obj\x86\Debug\GenerateResource.write.1.tlog
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Interfaces\hafta 5\obj\x86\Debug\hafta 5.exe
-c:\users\toshiba\documents\visual studio 2010\Projects\Data Structures\Interfaces\hafta 5\obj\x86\Debug\hafta 5.pdb

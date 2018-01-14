@@ -1,5 +1,0 @@
-New_identifier *new_identifier=create_by_name("New_identifier");
-new_identifier->new_identifier=NULL;
-new_identifier->identifier=identifier;
-new_identifier->index_no_of_virgul=16;
-printf_new_identifier(new_identifier);
