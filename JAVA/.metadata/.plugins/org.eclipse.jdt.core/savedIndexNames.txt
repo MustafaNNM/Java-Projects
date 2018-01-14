@@ -4,7 +4,6 @@ INDEX VERSION 1.130+C:\Users\MehmetAkif-PC\git\BILMUH\JAVA\.metadata\.plugins\or
 1245743421.index
 3042970757.index
 3855320291.index
-4239375565.index
 3603105883.index
 2807831302.index
 2841042463.index
@@ -44,16 +43,12 @@ INDEX VERSION 1.130+C:\Users\MehmetAkif-PC\git\BILMUH\JAVA\.metadata\.plugins\or
 2497420447.index
 121597878.index
 2271580473.index
-3271193799.index
 3364755906.index
 2132342881.index
-2865955459.index
 1712583887.index
 3604256129.index
 881568603.index
 1652947731.index
-2877066517.index
 1489416369.index
 712673515.index
 1028194294.index
-1123424218.index
