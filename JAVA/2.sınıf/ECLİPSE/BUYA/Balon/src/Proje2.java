@@ -1,17 +1,18 @@
 import java.util.*;
 
 public class Proje2 {
-	
+	static Scanner str1;
+	static Scanner str2;
 	public static void main(String[] Args){	
 		int m,n;
 		do{
 			System.out.println("m degerini (balon sayisini) giriniz:");
-			Scanner str1 = new Scanner(System.in);
+			str1 = new Scanner(System.in);
 			m = str1.nextInt();
 		}while(m<=0);
 		do{
 			System.out.println("n degerini (kac balonda bir patlatma isleminin yapilacagini) giriniz:");
-			Scanner str2 = new Scanner(System.in);
+			str2 = new Scanner(System.in);
 			n = str2.nextInt();
 		}while(n<=0);
 		//girdiler alindi.
@@ -31,7 +32,7 @@ public class Proje2 {
 				sayac1++;
 				sayac2++;
 			}
-			gecici.yazdir();
+			System.out.println(gecici.toString());
 			yigit.push(gecici);
 			katNo++;
 			//kucuk dongude her bir liste 10 eleman sayisina ulasinca o anki liste
