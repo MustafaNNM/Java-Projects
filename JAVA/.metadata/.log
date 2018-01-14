@@ -960,3 +960,6 @@ java.io.FileNotFoundException: C:\Users\MehmetAkif-PC\git\BILMUH\JAVA\.metadata\
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.ui 2 2 2018-01-14 23:47:42.744
+!MESSAGE Perspective with name 'TinyOS' and id 'tinyos.perspective' has been made into a local copy
