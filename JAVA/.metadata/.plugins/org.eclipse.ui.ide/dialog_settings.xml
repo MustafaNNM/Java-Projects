@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\MehmetAkif-PC\git\BILMUH\JAVA\vaadin-combo-box-master"/>
+		<item value="C:\Users\MehmetAkif-PC\Desktop\İş Başvurusu Belgeleri-mehmetakifilyasogullari-05062889411\Projeler-mehmetakifilyasoğulları-05062889411\Sunucu Yazılım\CDN"/>
+		<item value="C:\Users\MehmetAkif-PC\Desktop\sexercise"/>
+		<item value="C:\Users\MehmetAkif-PC\Desktop"/>
+	</list>
 	<section name="ExternalProjectImportWizard">
 		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\MehmetAkif-PC\Desktop\İş Başvurusu Belgeleri-mehmetakifilyasogullari-05062889411\Projeler-mehmetakifilyasoğulları-05062889411\Sunucu Yazılım\CDN"/>
 			<item value="C:\Users\MehmetAkif-PC\git\BILMUH\JAVA"/>
 			<item value="C:\Users\TOSHIBA\Desktop\Herbalist"/>
 			<item value="C:\Users\TOSHIBA\Documents\4. Sınıf Dersleri\Test Yönelimli Geliştirme\Money"/>

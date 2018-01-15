@@ -1,3 +1,1 @@
 INDEX VERSION 1.130+C:\Users\MehmetAkif-PC\git\BILMUH\JAVA\.metadata\.plugins\org.eclipse.jdt.core
-2185889410.index
-498899403.index

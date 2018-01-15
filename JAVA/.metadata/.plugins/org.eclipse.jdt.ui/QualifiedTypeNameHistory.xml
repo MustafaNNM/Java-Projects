@@ -10,4 +10,5 @@
 <fullyQualifiedTypeName name="agaclar.Vector_Agac"/>
 <fullyQualifiedTypeName name="agac.Node"/>
 <fullyQualifiedTypeName name="hash_table.Hash_Table"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>
