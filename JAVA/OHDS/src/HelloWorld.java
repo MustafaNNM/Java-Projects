@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 import org.eclipse.jetty.util.IO;
@@ -38,6 +40,23 @@ public class HelloWorld extends AbstractHandler {
 			System.out.println("DEBUG:132");
 			response.setStatus(HttpServletResponse.SC_OK);
 			System.out.println("DEBUG:133");
+			out = response.getWriter();
+			try {
+				String word="<form action=\"http://localhost:8080/ohds\"><div>\r\n" + 
+						"<select name=\"menu\">\r\n" + 
+						"<option value=\"0\" selected>(please select:)</option>\r\n" + 
+						"<option value=\"1\">TR</option>\r\n" + 
+						"<option value=\"2\">two</option>\r\n" + 
+						"<option value=\"3\">three</option>\r\n" + 
+						"<option value=\"other\">other, please specify:</option>\r\n" + 
+						"</select>\r\n" + 
+						"<input type=\"text\" name=\"choicetext\"></div>\r\n" + 
+						"<div><input type=\"submit\" value=\"submit\"></div>\r\n" + 
+						"</form>";
+				out.print(word);
+				} finally { 
+				//out.close();
+				}
 			//response.getWriter().println("Online Hava Durumu Sorgulama");
 			htmlcodeprinterofhost.printhtmlcodesofhost(response,host);
 			System.out.println("DEBUG:134");
@@ -85,6 +104,7 @@ public class HelloWorld extends AbstractHandler {
 	// }
 	byte[] _favicon;
 	boolean _serveIcon = true;
+	private PrintWriter out;
 
 	public HelloWorld() {
 		try {
