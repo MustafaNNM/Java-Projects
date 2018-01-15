@@ -93,3 +93,6 @@ java.io.InvalidClassException: org.eclipse.m2e.core.internal.project.registry.Ba
 	at org.eclipse.core.internal.events.NotificationManager$NotifyJob.run(NotificationManager.java:43) [org.eclipse.core.resources_3.12.0.v20170417-1558.jar:na]
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56) [org.eclipse.core.jobs_3.9.2.v20171030-1027.jar:na]
 2018-01-14 23:21:29,242 [Worker-25] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: SimpleHttpServer:SimpleHttpServer:0.0.1-SNAPSHOT @ C:\Users\MehmetAkif-PC\git\BILMUH\JAVA\SimpleHttpServer\pom.xml.
+2018-01-15 09:08:23,507 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-01-15 11:19:29,023 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-01-15 11:49:18,767 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

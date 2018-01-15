@@ -18,16 +18,7 @@ import javax.imageio.ImageIO;
  *
  */
 public class Scalar {
-	// BufferedImage createResizedCopy()
-	BufferedImage resizeImage(BufferedImage originalImage, int IMG_WIDTH, int IMG_HEIGHT) {
-		int type = originalImage.getType() == 0 ? BufferedImage.TYPE_INT_ARGB
-				: originalImage.getType();
-		BufferedImage resizedImage = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, type);
-		Graphics2D g = resizedImage.createGraphics();
-		g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
-		g.dispose();
-		return resizedImage;
-	}
+	
 	public static String TUMBNAILS = "./img/tumbnails/";
 
 	/**
@@ -39,9 +30,9 @@ public class Scalar {
 	 * @return path of geneterated tumbnail.
 	 * @throws Exception
 	 */
-	public String scale(String path, String fileName) throws Exception {
+	public String scale(String path, String fileName, int IMG_WIDTH, int IMG_HEIGHT) throws Exception {
 		BufferedImage originalImage = ImageIO.read(new File(path));
-		BufferedImage resizedCopy = createResizedCopy(originalImage, 50, 50, true);
+		BufferedImage resizedCopy = createResizedCopy(originalImage, IMG_WIDTH, IMG_HEIGHT, true);
 		File tosave = new File(TUMBNAILS + fileName);
 		ImageIO.write(resizedCopy, "jpg", tosave);
 		return tosave.getAbsolutePath();
@@ -129,7 +120,16 @@ public class Scalar {
 		g.dispose();
 		return scaledBI;
 	}
-
+	// BufferedImage createResizedCopy()
+		BufferedImage resizeImage(BufferedImage originalImage, int IMG_WIDTH, int IMG_HEIGHT) {
+			int type = originalImage.getType() == 0 ? BufferedImage.TYPE_INT_ARGB
+					: originalImage.getType();// ? BufferedImage.TYPE_INT_RGB : BufferedImage.TYPE_INT_ARGB;
+			BufferedImage resizedImage = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, type);
+			Graphics2D g = resizedImage.createGraphics();
+			g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
+			g.dispose();
+			return resizedImage;
+		}
 	/**
 	 * Converts given image to gray scale.
 	 * 
