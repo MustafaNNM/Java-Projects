@@ -11,4 +11,9 @@
 <fullyQualifiedTypeName name="agac.Node"/>
 <fullyQualifiedTypeName name="hash_table.Hash_Table"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.Driver"/>
 </qualifiedTypeNameHistroy>

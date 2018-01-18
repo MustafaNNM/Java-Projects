@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="true" key="Replace"/>
-	<item value="C:\Users\MehmetAkif-PC\Desktop" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="C:\Program Files\Microsoft JDBC Driver 6.0 for SQL Server\sqljdbc_6.0\enu\jre8" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="false" key="InstanceOf"/>
 	<item value="false" key="delegateUpdating"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
@@ -74,7 +74,7 @@
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item value="3" key="pageIndex"/>
+		<item value="2" key="pageIndex"/>
 	</section>
 	<section name="completion_proposal_size">
 	</section>

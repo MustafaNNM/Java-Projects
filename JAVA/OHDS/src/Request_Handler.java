@@ -11,6 +11,11 @@ import org.eclipse.jetty.server.handler.AbstractHandler;
 import org.eclipse.jetty.util.IO;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Enumeration;
 import java.util.NoSuchElementException;
 
@@ -109,9 +114,25 @@ public class Request_Handler extends AbstractHandler {
 			}
 		}
 	}
-
+static String str="jdbc:sqlserver://localhost:1433;databaseName=OHDS;user=sa;password=123456";
 	private int kullanici_adinin_ve_sifresinin_kontrol_edilmesi(String kullanici_adi, String password) {
-		
+		try {
+			//String server = "localhost";
+            //String database = "OHDS";
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Connection connection = DriverManager.getConnection(str);
+            String sorgu="SELECT Person_Id, kullanici_adi, sifre, kullanici_tipi FROM dbo.PERSON";
+            Statement statement=connection.createStatement();
+			ResultSet resultset=statement.executeQuery(sorgu);
+			while(resultset.next()) {
+				System.out.println(resultset.getString("Person_Id")+resultset.getString("kullanici_adi")+resultset.getString("sifre")+resultset.getString("kullanici_tipi"));
+			}
+			 
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		return kullanici_tipi;
 	}
 
