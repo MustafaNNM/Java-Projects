@@ -75,28 +75,16 @@ public class HelloWorld extends AbstractHandler {
 				parameterNames = request.getParameterNames();
 				System.out.println("DEBUG:8");
 				while (parameterNames.hasMoreElements()) {
-					System.out.println("DEBUG:9");
 					try {
-						System.out.println("DEBUG:10");
 						name = (String) parameterNames.nextElement();
-						System.out.println("DEBUG:11");
 					} catch (NoSuchElementException e) {
-						System.out.println("DEBUG:12");
-						hata_var_mý = true;
-						System.out.println("DEBUG:13");
 						response.setStatus(HttpServletResponse.SC_OK);
-						System.out.println("DEBUG:14");
 						baseRequest.setHandled(true);
-						System.out.println("DEBUG:15");
 						e.printStackTrace();
-						System.out.println("DEBUG:16");
 						return;
 					}
-					System.out.println("DEBUG:17");
 					value = request.getParameter(name).toString();
-					System.out.println("DEBUG:18");
 					System.out.println(String.format("%s==%s\n", name, value));
-					System.out.println("DEBUG:19");
 					if (name.startsWith("width")) {
 						System.out.println("DEBUG:20");
 						try {

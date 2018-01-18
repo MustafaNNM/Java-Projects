@@ -1,4 +1,4 @@
-
+ï»¿
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.Enumeration;
 import java.util.NoSuchElementException;
 
-public class HelloWorld extends AbstractHandler {
+public class eskisite extends AbstractHandler {
 	private static HtmlCodePrinterofHost htmlcodeprinterofhost = new HtmlCodePrinterofHost();
 
 	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
@@ -39,7 +39,7 @@ public class HelloWorld extends AbstractHandler {
 			} catch (StringIndexOutOfBoundsException e1) {
 				e1.printStackTrace();
 			}
-			// System.out.println("resim adý:" + sorgu);
+			// System.out.println("resim adÃ½:" + sorgu);
 			System.out.println("DEBUG:132");
 			response.setStatus(HttpServletResponse.SC_OK);
 			System.out.println("DEBUG:133");
@@ -59,7 +59,7 @@ public class HelloWorld extends AbstractHandler {
 						+ "            <img class=\"img-responsive\" src=\"/Content/img/combobox/codesnippet.png\" />\r\n"
 						+ "        </div>\r\n" + "    </div>\r\n" + "</div>\r\n"
 						+ "<script type=\"text/javascript\">\r\n" +
-						/* veritabanindan veri çekmek gerekiyor */
+						/* veritabanindan veri Ã§ekmek gerekiyor */
 						"    var Locations = ['Turkey/Kahramanmaras', 'Turkey/Ankara', 'Turkey/Bursa', 'Turkey/Izmir', 'Turkey/Istanbul', 'Turkey/Diyarbakir', 'Turkey/Kahramanmaras', 'Turkey/Kahramanmaras', 'Turkey/Kahramanmaras', 'Turkey/Kahramanmaras'];\r\n"
 						+ "    jQuery(function ($) {\r\n" + "        $(\"#comboBoxLocations\").shieldComboBox({\r\n"
 						+ "            dataSource: {\r\n" + "                data: Locations\r\n" + "            },\r\n"
@@ -67,7 +67,7 @@ public class HelloWorld extends AbstractHandler {
 						+ "        });\r\n" + "        $(\"#submit\").shieldButton({\r\n" + "            events: {\r\n"
 						+ "                click: function () {\r\n"
 						+ "                    var Location = $(\"#comboBoxLocations\").swidget().value();\r\n" +
-						/* burada request yapýlmasý lazým */
+						/* burada request yapÃ½lmasÃ½ lazÃ½m */
 						"                    alert(\"Location: \" + Location);\r\n"
 						+ "window.location.assign(\"http://localhost:8080/ohds/?location=\"+Location)"
 						+ "                }\r\n" + "            }\r\n" + "        });\r\n" + "    });\r\n"
@@ -88,7 +88,7 @@ public class HelloWorld extends AbstractHandler {
 				// out.close();
 			}
 			// response.getWriter().println("Online Hava Durumu Sorgulama");
-			// Urlyi parse edip lokasyon deðerini almamýz gerekiyor.
+			// Urlyi parse edip lokasyon deÃ°erini almamÃ½z gerekiyor.
 			Enumeration<String> parameterNames;
 			System.out.println("DEBUG:7");
 			parameterNames = request.getParameterNames();
@@ -97,7 +97,7 @@ public class HelloWorld extends AbstractHandler {
 			String value = "";
 			String lokasyon = "Turkey/Kahramanmaras";
 			@SuppressWarnings("unused")
-			boolean hata_var_mý = false;
+			boolean hata_var_mÃ½ = false;
 			while (parameterNames.hasMoreElements()) {
 				System.out.println("DEBUG:9");
 				try {
@@ -106,7 +106,7 @@ public class HelloWorld extends AbstractHandler {
 					System.out.println("DEBUG:11");
 				} catch (NoSuchElementException e) {
 					System.out.println("DEBUG:12");
-					hata_var_mý = true;
+					hata_var_mÃ½ = true;
 					System.out.println("DEBUG:13");
 					response.setStatus(HttpServletResponse.SC_OK);
 					System.out.println("DEBUG:14");
@@ -133,7 +133,7 @@ public class HelloWorld extends AbstractHandler {
 					} catch (NumberFormatException e) {
 						System.out.println("DEBUG:23");
 						System.out.println("DEBUG:24");
-						hata_var_mý = true;
+						hata_var_mÃ½ = true;
 						System.out.println("DEBUG:25");
 						e.printStackTrace();
 						System.out.println("DEBUG:26");
@@ -201,7 +201,7 @@ public class HelloWorld extends AbstractHandler {
 	boolean _serveIcon = true;
 	private PrintWriter out;
 
-	public HelloWorld() {
+	public eskisite() {
 		try {
 			URL fav = this.getClass().getClassLoader().getResource("./img/favicon.ico");
 			if (fav != null)
@@ -224,6 +224,6 @@ public class HelloWorld extends AbstractHandler {
 	 *            the htmlcodeprinterofhost to set
 	 */
 	public static void setHtmlcodeprinterofhost(HtmlCodePrinterofHost htmlcodeprinterofhost) {
-		HelloWorld.htmlcodeprinterofhost = htmlcodeprinterofhost;
+		eskisite.htmlcodeprinterofhost = htmlcodeprinterofhost;
 	}
 }

@@ -19,9 +19,9 @@ public class OHDS {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		HelloWorld helloWorld = new HelloWorld();
+		Request_Handler request_handler = new Request_Handler();
 		CNDServer cdnServer=new CNDServer();
-		cdnServer.getServer().setHandler(helloWorld);
+		cdnServer.getServer().setHandler(request_handler);
 		try {
 			cdnServer.getServer().start();
 		} catch (Exception e) {
