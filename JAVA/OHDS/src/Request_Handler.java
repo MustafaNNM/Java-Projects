@@ -191,6 +191,7 @@ public class Request_Handler extends AbstractHandler {
 												yeni_sifre = request.getParameter(name);
 												yeni_sifre_parametre_varmi = true;
 											} catch (Exception e) {
+												
 												e.printStackTrace();
 											}
 										} else {
@@ -199,7 +200,10 @@ public class Request_Handler extends AbstractHandler {
 													yeni_kullanici_tipi = Integer.parseInt(request.getParameter(name));
 													yeni_kullanici_tipi_parametre_varmi = true;
 												} catch (Exception e) {
-													e.printStackTrace();
+													out.close();
+													baseRequest.setHandled(true);
+													return;
+													//e.printStackTrace();
 												}
 											} else {
 												if (name.equals("location")) {
