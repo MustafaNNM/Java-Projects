@@ -7,32 +7,24 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-import javax.servlet.http.HttpServletResponse;
-
 public class HtmlCodePrinterofHost  {
 
 	/**
 	 * @param response 
 	 * @param bufferedreader
 	 */
-	private static void readlinesofbufferedreader(HttpServletResponse response, BufferedReader bufferedreader) {
+	private String readlinesofbufferedreader(BufferedReader bufferedreader) {
 		String line;
-		StringBuffer sb = new StringBuffer("");
+		String sb ="";
 		try {
 			while ((line = bufferedreader.readLine()) != null) {
-			    sb.append(line+"\n");
-			    response.getWriter().println(line+"\n");
+			    sb+=line+"\n";
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		System.out.println(sb);
-		//try {
-			//response.getWriter().println(sb);
-		//} catch (IOException e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
-		//}
+		return sb.toString();
 	}
 
 	/**
@@ -96,7 +88,7 @@ public class HtmlCodePrinterofHost  {
 		return url;
 	}
 
-	public void printhtmlcodesofhost(HttpServletResponse response, String host) {
+	public String printhtmlcodesofhost(String host) {
 		URL url = null;
 		URLConnection connection=null;
 		InputStream connectionStream = null;
@@ -107,8 +99,7 @@ public class HtmlCodePrinterofHost  {
 		connectionStream = getconnectionStreamofconnection(connection, connectionStream);
 		inputStreamReader = createinputstreamreader(connectionStream, inputStreamReader);
 		bufferedreader = createbufferedreader(inputStreamReader);
-		readlinesofbufferedreader(response,bufferedreader);
-		
+		return  readlinesofbufferedreader(bufferedreader);
 	}
 
 

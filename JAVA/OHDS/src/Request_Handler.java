@@ -20,24 +20,37 @@ import java.util.NoSuchElementException;
 
 public class Request_Handler extends AbstractHandler {
 	private static HtmlCodePrinterofHost htmlcodeprinterofhost = new HtmlCodePrinterofHost();
+
 	private int kullanici_tipi = -1;
+	private int yeni_kullanici_tipi = 1;
+
 	private PrintWriter out = null;
 	private String requestURI = "";
+	private String host = "";
 	private Enumeration<String> parameterNames;
 	private String name = "";
 	private String value = "";
 	private String kullanici_adi = "";
 	private String sifre = "";
+	private String yeni_kullanici_adi = "";
+	private String yeni_sifre = "";
 	private String admin_anamenu_option = "";
 	private String admin_anamenu_kullanici_duzenle_option = "";
 	private String admin_anamenu_lokasyon_duzenle_option = "";
 	private String standart_anamenu_option = "";
+	private String location = "";
+	private String json_verileri = "";
 	private Boolean kullanici_adi_parametre_varmi = false;
 	private Boolean admin_anamenu_option_parametre_varmi = false;
 	private Boolean admin_anamenu_kullanici_duzenle_option_parametre_varmi = false;
 	private Boolean admin_anamenu_lokasyon_duzenle_option_parametre_varmi = false;
 	private Boolean sifre_parametre_varmi = false;
 	private Boolean standart_anamenu_option_parametre_varmi = false;
+	private Boolean yeni_kullanici_adi_parametre_varmi = false;
+	private Boolean yeni_sifre_parametre_varmi = false;
+	private Boolean yeni_kullanici_tipi_parametre_varmi = false;
+	private Boolean location_parametre_varmi = false;
+
 	private String sayfalar = "<a href=\"http://localhost:8080/anasayfa\">Anasayfa</a>\r\n"
 			+ "<a href=\"http://localhost:8080/login\">Login</a>\r\n"
 			+ "<a href=\"http://localhost:8080/admin_anamenu\">Admin Anamenu</a>\r\n"
@@ -61,10 +74,13 @@ public class Request_Handler extends AbstractHandler {
 	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		requestURI = "";
+		host = "";
 		name = "";
 		value = "";
 		kullanici_adi = "";
 		sifre = "";
+		yeni_kullanici_adi = "";
+		yeni_sifre = "";
 		admin_anamenu_option = "";
 		admin_anamenu_kullanici_duzenle_option = "";
 		admin_anamenu_lokasyon_duzenle_option = "";
@@ -75,6 +91,10 @@ public class Request_Handler extends AbstractHandler {
 		admin_anamenu_lokasyon_duzenle_option_parametre_varmi = false;
 		sifre_parametre_varmi = false;
 		standart_anamenu_option_parametre_varmi = false;
+		yeni_kullanici_adi_parametre_varmi = false;
+		yeni_sifre_parametre_varmi = false;
+		yeni_kullanici_tipi_parametre_varmi = false;
+
 		System.out.println("DEBUG:1");
 		// requestin işlenmesi
 		// root=0,admin=1,standart=2,ziyaretçi=3
@@ -154,6 +174,49 @@ public class Request_Handler extends AbstractHandler {
 									} catch (Exception e) {
 										e.printStackTrace();
 									}
+								} else {
+									// yeni_sifre = "";
+									// yeni_kullanici_tipi
+									if (name.equals("yeni_kullanici_adi")) {
+										try {
+											yeni_kullanici_adi = request.getParameter(name);
+											yeni_kullanici_adi_parametre_varmi = true;
+										} catch (Exception e) {
+											e.printStackTrace();
+										}
+									} else {
+										//
+										if (name.equals("yeni_sifre")) {
+											try {
+												yeni_sifre = request.getParameter(name);
+												yeni_sifre_parametre_varmi = true;
+											} catch (Exception e) {
+												e.printStackTrace();
+											}
+										} else {
+											if (name.equals("yeni_kullanici_tipi")) {
+												try {
+													yeni_kullanici_tipi = Integer.parseInt(request.getParameter(name));
+													yeni_kullanici_tipi_parametre_varmi = true;
+												} catch (Exception e) {
+													e.printStackTrace();
+												}
+											} else {
+												if (name.equals("location")) {
+													try {
+														location = request.getParameter(name);
+														host = "http://api.wunderground.com/api/d967493a39902bc0/conditions/lang:TR/q/"
+																+ location + ".json";
+														json_verileri = htmlcodeprinterofhost
+																.printhtmlcodesofhost(host);
+													} catch (NumberFormatException e) {
+														e.printStackTrace();
+													}
+													System.out.println("DEBUG:29");
+												}
+											}
+										}
+									}
 								}
 							}
 						}
@@ -173,7 +236,6 @@ public class Request_Handler extends AbstractHandler {
 	private void requeste_gore_sayfalarin_yuklenmesi(String target, Request baseRequest, HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
 		System.out.println("DEBUG:3");
-
 		if (requestURI.equals("/anasayfa")) {
 			// Kullanıcı anasayfaya girmek isterse
 			ana_sayfanin_yukenmesi(target, baseRequest, request, response);
@@ -220,13 +282,19 @@ public class Request_Handler extends AbstractHandler {
 						} else {
 							if (requestURI.equals("/admin_anamenu/hava_durumu")
 									&& (kullanici_tipi == 0 || kullanici_tipi == 1)) {
-								// hava_durumu
-								// yetki var
-								// comboboxtan secim yapılması gerekiyor önce lokasyon ekleme işlemlerin
-								// yapılması gerekiyor.
-								// comboboxta veri varsa seçim yapılması gerekiyor.
-								// düzenleme aşamasında
-								admin_anamenu_hava_durumu_sayfasinin_yuklenmesi(target, baseRequest, request, response);
+								if (location_parametre_varmi == true) {
+									//sonuc_sayfasinin_yuklenmesi(target, baseRequest, request, response);
+									hava_durumu_sonuc_sayfasina_yonlendirilmesi(target, baseRequest, request, response);
+								} else {
+									// hava_durumu
+									// yetki var
+									// comboboxtan secim yapılması gerekiyor önce lokasyon ekleme işlemlerin
+									// yapılması gerekiyor.
+									// comboboxta veri varsa seçim yapılması gerekiyor.
+									// düzenleme aşamasında
+									admin_anamenu_hava_durumu_sayfasinin_yuklenmesi(target, baseRequest, request,
+											response);
+								}
 							} else {
 								if (requestURI.equals("/admin_anamenu/kullanici_duzenle")
 										&& (kullanici_tipi == 0 || kullanici_tipi == 1)) {
@@ -255,8 +323,19 @@ public class Request_Handler extends AbstractHandler {
 												&& (kullanici_tipi == 0 || kullanici_tipi == 1)) {
 											// yetki var
 											// düzenleme aşamasında
-											admin_anamenu_kullanici_duzenle_kullanici_ekleme_sayfasinin_yuklenmesi(
-													target, baseRequest, request, response);
+											if (yeni_kullanici_adi_parametre_varmi == true
+													&& yeni_sifre_parametre_varmi == true
+													&& yeni_kullanici_tipi_parametre_varmi == true) {
+												try {
+													veritabanina_kullanici_ekle(target, baseRequest, request, response);
+												} catch (SQLException e) {
+													e.printStackTrace();
+												}
+											} else {
+												admin_anamenu_kullanici_duzenle_kullanici_ekleme_sayfasinin_yuklenmesi(
+														target, baseRequest, request, response);
+											}
+
 										} else {
 											if (requestURI
 													.equals("/admin_anamenu/kullanici_duzenle/kullanici_guncelleme")
@@ -282,10 +361,12 @@ public class Request_Handler extends AbstractHandler {
 														admin_anamenu_kullanici_duzenle_kullanici_listeleme_sayfasinin_yuklenmesi(
 																target, baseRequest, request, response);
 													} else {
-														if (_serveIcon && _favicon != null
-																&& requestURI.equals("/favicon.ico")) {
+														if (requestURI.equals("/favicon.ico")) {
+															// _serveIcon && _favicon != null
+															// && requestURI.equals("/favicon.ico")
+
 															// parametre ve yetki gerektirmiyor
-															faviconun_yuklenmesi(baseRequest, response);
+															// faviconun_yuklenmesi(baseRequest, response);
 														} else {
 															if (requestURI.equals(
 																	"/admin_anamenu/lokasyon_duzenle/lokasyon_listeleme")
@@ -347,12 +428,18 @@ public class Request_Handler extends AbstractHandler {
 																				if (requestURI.equals(
 																						"/standart_anamenu/hava_durumu")
 																						&& kullanici_tipi == 2) {
-																					// hava_durumu
-																					// yetki var
-																					// düzenlenme aşamasında
-																					standart_anamenu_hava_durumu_sayfasinin_yuklenmesi(
-																							target, baseRequest,
-																							request, response);
+																					if (location_parametre_varmi == true) {
+																						hava_durumu_sonuc_sayfasina_yonlendirilmesi(
+																								target, baseRequest,
+																								request, response);
+																					} else {
+																						// hava_durumu
+																						// yetki var
+																						// düzenlenme aşamasında
+																						standart_anamenu_hava_durumu_sayfasinin_yuklenmesi(
+																								target, baseRequest,
+																								request, response);
+																					}
 																				} else {
 																					if (requestURI.equals(
 																							"/standart_anamenu/raporlar")
@@ -366,7 +453,8 @@ public class Request_Handler extends AbstractHandler {
 																					} else {
 																						if (requestURI.equals(
 																								"/standart_anamenu")
-																								&& kullanici_tipi == 1) {// standart_menu_option
+																								&& (kullanici_tipi == 0
+																										|| kullanici_tipi == 1)) {// standart_menu_option
 																							// standart kullanıcı
 																							// yetkisi var
 																							if (admin_anamenu_option_parametre_varmi == true) {
@@ -390,7 +478,8 @@ public class Request_Handler extends AbstractHandler {
 																						} else {
 																							if (requestURI.equals(
 																									"/standart_anamenu/raporlar")
-																									&& kullanici_tipi == 1) {
+																									&& (kullanici_tipi == 0
+																											|| kullanici_tipi == 1)) {
 																								// yetki var
 																								// raporlar
 																								// düzenlenme aşamasında
@@ -399,16 +488,39 @@ public class Request_Handler extends AbstractHandler {
 																										baseRequest,
 																										request,
 																										response);
-																							} else {// sayfa bulunamadı
+																							} else {// sayfa
+																									// bulunamadı///
 																									// yada
 																									// yetkisiz
 																									// kullanıcı
 																									// request var
-																								ziyaretcinin_anasayfaya_yonlendirilmesi(
-																										target,
-																										baseRequest,
-																										request,
-																										response);
+																								if (requestURI.equals(
+																										"/admin_anamenu/hava_durumu/sonuc")
+																										&& (kullanici_tipi == 0
+																												|| kullanici_tipi == 1)) {
+																									
+																										sonuc_sayfasinin_yuklenmesi(
+																												target,
+																												baseRequest,
+																												request,
+																												response);
+																								} else {
+																									if (kullanici_tipi == 0
+																											|| kullanici_tipi == 1
+																											|| kullanici_tipi == 2) {
+																										//birşey yapma
+																									}else {
+																										System.out.println(
+																												"buraya girmemesi lazım");
+																										ziyaretcinin_anasayfaya_yonlendirilmesi(
+																												target,
+																												baseRequest,
+																												request,
+																												response);
+																									}
+
+																								}
+
 																							}
 																						}
 																					}
@@ -433,6 +545,22 @@ public class Request_Handler extends AbstractHandler {
 		}
 	}
 
+	private void sonuc_sayfasinin_yuklenmesi(String target, Request baseRequest, HttpServletRequest request,
+			HttpServletResponse response) {
+		out.print(json_verileri);
+	}
+
+	private void hava_durumu_sonuc_sayfasina_yonlendirilmesi(String target, Request baseRequest,
+			HttpServletRequest request, HttpServletResponse response) {
+		try {
+			response.sendRedirect("/admin_anamenu/hava_durumu/sonuc");
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	private void adminin_admin_anamenu_raporlar_sayfasina_yonlendirilmesi(String target, Request baseRequest,
 			HttpServletRequest request, HttpServletResponse response) {
 		try {
@@ -442,7 +570,7 @@ public class Request_Handler extends AbstractHandler {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	/**
@@ -558,6 +686,44 @@ public class Request_Handler extends AbstractHandler {
 		 * tasarlanması gerekmektedir.
 		 */
 		return kullanici_tipi;
+	}
+
+	private void veritabanina_kullanici_ekle(String target, Request baseRequest, HttpServletRequest request,
+			HttpServletResponse response) throws SQLException {
+		System.out.println("DEBUG:kullanici ekleme");
+		if (kullanici_tipi == 0 || kullanici_tipi == 1) {
+			try {
+				// String server = "localhost";
+				// String database = "OHDS";
+				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			Connection connection = null;
+			try {
+				connection = DriverManager.getConnection(str);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			String sorgu = "INSERT INTO [dbo].[PERSON]([kullanici_adi],[sifre],[kullanici_tipi])VALUES('sancak','123456',2)";
+
+			// sorgu = "INSERT INTO [dbo].[PERSON]
+			// ([kullanici_adi],[sifre],[kullanici_tipi]) VALUES ('"
+			// + yeni_kullanici_adi + "','" + yeni_sifre + "', " + yeni_kullanici_tipi + "
+			// )";
+			Statement statement = null;
+			try {
+				statement = connection.createStatement();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			statement.execute(sorgu);
+			connection.close();
+		} else {
+			standart_menuye_yada_logine_yonlendir(target, baseRequest, request, response);
+		}
 	}
 
 	private String veritabanindan_kullanicilari_listele() {
@@ -698,7 +864,7 @@ public class Request_Handler extends AbstractHandler {
 
 	private void standart_anamenu_hava_durumu_sayfasinin_yuklenmesi(String target, Request baseRequest,
 			HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("DEBUG:14");
+		// json_verileri
 		ana_sayfanin_yukenmesi(target, baseRequest, request, response);
 	}
 
@@ -766,6 +932,11 @@ public class Request_Handler extends AbstractHandler {
 			Request baseRequest, HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("DEBUG:23");
 		ana_sayfanin_yukenmesi(target, baseRequest, request, response);
+		out.print("        <form method=\"post\" action=\"kullanici_duzenle/kullanici_ekleme\">\r\n"
+				+ "        Kullanici Adi :<input type=\"text\" name=\"yeni_kullanici_adi\" /><br/>\r\n"
+				+ "        Sifre         :<input type=\"text\" name=\"yeni_sifre\" /><br/>\r\n"
+				+ "        Kullanici Tipi:<input type=\"text\" name=\"yeni_kullanici_tipi\" /><br/>\r\n"
+				+ "        <input type=\"submit\" value=\"YeniKayit\" />\r\n" + "        </form>\r\n");
 	}
 
 	private void admin_anamenu_raporlar_sayfasinin_yuklenmesi(String target, Request baseRequest,
@@ -776,8 +947,10 @@ public class Request_Handler extends AbstractHandler {
 
 	private void admin_anamenu_hava_durumu_sayfasinin_yuklenmesi(String target, Request baseRequest,
 			HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("DEBUG:25");
-		ana_sayfanin_yukenmesi(target, baseRequest, request, response);
+		// ana_sayfanin_yukenmesi(target, baseRequest, request, response);
+		out.print("        <form method=\"post\" action=\"admin_anamenu/hava_durumu/sonuc\">\r\n"
+				+ "        Lokasyon:<input type=\"text\" name=\"location\" /><br/>\r\n"
+				+ "        <input type=\"submit\" value=\"Sorgula\" />\r\n" + "        </form>\r\n");
 	}
 
 	/**
@@ -1053,7 +1226,12 @@ public class Request_Handler extends AbstractHandler {
 	private void faviconun_yuklenmesi(Request baseRequest, HttpServletResponse response) throws IOException {
 		response.setStatus(HttpServletResponse.SC_OK);
 		response.setContentType("image/x-icon");
-		response.setContentLength(_favicon.length);
+		try {
+			response.setContentLength(_favicon.length);
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+
 		response.getOutputStream().write(_favicon);
 		return;
 	}
@@ -1403,5 +1581,155 @@ public class Request_Handler extends AbstractHandler {
 	 */
 	public void set_serveIcon(boolean _serveIcon) {
 		this._serveIcon = _serveIcon;
+	}
+
+	/**
+	 * @return the yeni_kullanici_adi
+	 */
+	public String getYeni_kullanici_adi() {
+		return yeni_kullanici_adi;
+	}
+
+	/**
+	 * @param yeni_kullanici_adi
+	 *            the yeni_kullanici_adi to set
+	 */
+	public void setYeni_kullanici_adi(String yeni_kullanici_adi) {
+		this.yeni_kullanici_adi = yeni_kullanici_adi;
+	}
+
+	/**
+	 * @return the yeni_sifre
+	 */
+	public String getYeni_sifre() {
+		return yeni_sifre;
+	}
+
+	/**
+	 * @param yeni_sifre
+	 *            the yeni_sifre to set
+	 */
+	public void setYeni_sifre(String yeni_sifre) {
+		this.yeni_sifre = yeni_sifre;
+	}
+
+	/**
+	 * @return the yeni_kullanici_tipi
+	 */
+	public int getYeni_kullanici_tipi() {
+		return yeni_kullanici_tipi;
+	}
+
+	/**
+	 * @param yeni_kullanici_tipi
+	 *            the yeni_kullanici_tipi to set
+	 */
+	public void setYeni_kullanici_tipi(int yeni_kullanici_tipi) {
+		this.yeni_kullanici_tipi = yeni_kullanici_tipi;
+	}
+
+	/**
+	 * @return the yeni_kullanici_adi_parametre_varmi
+	 */
+	public Boolean getYeni_kullanici_adi_parametre_varmi() {
+		return yeni_kullanici_adi_parametre_varmi;
+	}
+
+	/**
+	 * @param yeni_kullanici_adi_parametre_varmi
+	 *            the yeni_kullanici_adi_parametre_varmi to set
+	 */
+	public void setYeni_kullanici_adi_parametre_varmi(Boolean yeni_kullanici_adi_parametre_varmi) {
+		this.yeni_kullanici_adi_parametre_varmi = yeni_kullanici_adi_parametre_varmi;
+	}
+
+	/**
+	 * @return the yeni_sifre_parametre_varmi
+	 */
+	public Boolean getYeni_sifre_parametre_varmi() {
+		return yeni_sifre_parametre_varmi;
+	}
+
+	/**
+	 * @param yeni_sifre_parametre_varmi
+	 *            the yeni_sifre_parametre_varmi to set
+	 */
+	public void setYeni_sifre_parametre_varmi(Boolean yeni_sifre_parametre_varmi) {
+		this.yeni_sifre_parametre_varmi = yeni_sifre_parametre_varmi;
+	}
+
+	/**
+	 * @return the yeni_kullanici_tipi_parametre_varmi
+	 */
+	public Boolean getYeni_kullanici_tipi_parametre_varmi() {
+		return yeni_kullanici_tipi_parametre_varmi;
+	}
+
+	/**
+	 * @param yeni_kullanici_tipi_parametre_varmi
+	 *            the yeni_kullanici_tipi_parametre_varmi to set
+	 */
+	public void setYeni_kullanici_tipi_parametre_varmi(Boolean yeni_kullanici_tipi_parametre_varmi) {
+		this.yeni_kullanici_tipi_parametre_varmi = yeni_kullanici_tipi_parametre_varmi;
+	}
+
+	/**
+	 * @return the location
+	 */
+	public String getLocation() {
+		return location;
+	}
+
+	/**
+	 * @param location
+	 *            the location to set
+	 */
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	/**
+	 * @return the location_parametre_varmi
+	 */
+	public Boolean getLocation_parametre_varmi() {
+		return location_parametre_varmi;
+	}
+
+	/**
+	 * @param location_parametre_varmi
+	 *            the location_parametre_varmi to set
+	 */
+	public void setLocation_parametre_varmi(Boolean location_parametre_varmi) {
+		this.location_parametre_varmi = location_parametre_varmi;
+	}
+
+	/**
+	 * @return the json_verileri
+	 */
+	public String getJson_verileri() {
+		return json_verileri;
+	}
+
+	/**
+	 * @param json_verileri
+	 *            the json_verileri to set
+	 */
+	public void setJson_verileri(String json_verileri) {
+		this.json_verileri = json_verileri;
+	}
+
+	/**
+	 * @return the host
+	 */
+	public String getHost() {
+		return host;
+	}
+
+	/**
+	 * @param host
+	 *            the host to set
+	 */
+	public void setHost(String host) {
+		this.host = host;
 	}
 }

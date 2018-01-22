@@ -1,3 +1,5 @@
+import java.net.BindException;
+
 /**
  * 
  */
@@ -24,7 +26,10 @@ public class OHDS {
 		cdnServer.getServer().setHandler(request_handler);
 		try {
 			cdnServer.getServer().start();
-		} catch (Exception e) {
+		} catch (BindException e) {
+			System.out.println("Önceki programý kapat");
+			e.printStackTrace();
+		}catch (Exception e) {//BindException
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
