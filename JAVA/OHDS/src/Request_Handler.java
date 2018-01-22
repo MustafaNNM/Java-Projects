@@ -339,7 +339,6 @@ public class Request_Handler extends AbstractHandler {
 												admin_anamenu_kullanici_duzenle_kullanici_ekleme_sayfasinin_yuklenmesi(
 														target, baseRequest, request, response);
 											}
-
 										} else {
 											if (requestURI
 													.equals("/admin_anamenu/kullanici_duzenle/kullanici_guncelleme")
@@ -502,7 +501,6 @@ public class Request_Handler extends AbstractHandler {
 																										"/admin_anamenu/hava_durumu/sonuc")
 																										&& (kullanici_tipi == 0
 																												|| kullanici_tipi == 1)) {
-																									
 																										sonuc_sayfasinin_yuklenmesi(
 																												target,
 																												baseRequest,
@@ -522,9 +520,7 @@ public class Request_Handler extends AbstractHandler {
 																												request,
 																												response);
 																									}
-
 																								}
-
 																							}
 																						}
 																					}

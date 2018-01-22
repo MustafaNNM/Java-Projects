@@ -2,18 +2,26 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="ziyaretcinin_anasayfaya_yonlendirilmesi" key="selection"/>
+		<item value="hava_durumu_sonuc_sayfasina_yonlendirilmesi" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="hava_durumu_sonuc_sayfasina_yonlendirilmesi"/>
 			<item value="ziyaretcinin_anasayfaya_yonlendirilmesi"/>
+			<item value="admin_anamenu_hava_durumu_sayfasinin_yuklenmesi"/>
+			<item value="veritabanina_kullanici_ekle"/>
+			<item value="System.out.println(&quot;DEBUG:&quot;);"/>
+			<item value="DEBUG"/>
+			<item value="ana_sayfanin_yukenmesi"/>
+			<item value="kullanici_tipine_gore_menuye_yonlendir"/>
 			<item value="kullanici_tipine_gore_yonlendir"/>
 			<item value="standart_kullanicinin_standart_anamenuye_yonlendirilmesi"/>
 			<item value="hash_table"/>
 		</list>
 		<list key="replacehistory">
+			<item value=" "/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
