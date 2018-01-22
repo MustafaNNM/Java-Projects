@@ -31,9 +31,9 @@
 		</section>
 	</section>
 	<section name="ExtractMethodWizard">
-		<item value="false" key="GenerateJavadoc"/>
+		<item value="true" key="GenerateJavadoc"/>
 		<item value="2" key="AccessModifier"/>
-		<item value="false" key="ThrowRuntimeExceptions"/>
+		<item value="true" key="ThrowRuntimeExceptions"/>
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="true" key="create_constructor"/>
