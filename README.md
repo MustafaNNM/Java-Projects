@@ -15,4 +15,4 @@ Projelerimi github'aktarma sebeplerim :
   
   Mezun olduğum bölüm: https://bilmuh.ege.edu.tr
   
-  Eposta adresim:mehmetakifilyasogullari@gmail.comor
+  Eposta adresim:mehmet.akif@mcf.com.tr
