@@ -1,5 +1,3 @@
-/bitki.txt
-/hastalık.txt
 /Date.class
 /ItemID.class
 /Money.class
@@ -12,9 +10,11 @@
 /Store.class
 /ağaç/
 /ağaçlar/
+/bitki.txt
 /dert/
 /deva/
 /hash_table/
+/hastalık.txt
 /kategori.txt
 /money/
 /test/

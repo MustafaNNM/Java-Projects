@@ -17,14 +17,14 @@ public class Proje2 {
 		}while(n<=0);
 		//girdiler alindi.
 		
-		Stack<BListe> yigit = new Stack<BListe>(); //yigit olusturuldu.
+		Stack<Bagli_Liste> yigit = new Stack<Bagli_Liste>(); //yigit olusturuldu.
 		
 		int sayac1=1;
 		int	sayac2=1;
 		int katNo=1;
 		
 		while(sayac1<=m){
-			BListe gecici = new BListe(katNo);
+			Bagli_Liste gecici = new Bagli_Liste(katNo);
 			System.out.println("\n"+katNo+". kattaki listedeki balonlar:");
 			sayac2=1;
 			while(sayac2<=10 && sayac1<=m){	
@@ -47,7 +47,7 @@ public class Proje2 {
 		long zaman;				//problemlerin cozuldugu aralikta gecen zaman
 		final long baslangic = System.currentTimeMillis();	//sistem saati degeri milisaniye olarak alindi.
 		while(!yigit.empty()){
-			BListe gecici = yigit.pop();
+			Bagli_Liste gecici = yigit.pop();
 			gecici.patlat(n);
 			problemSayisi++;
 		}//yigit bosalana kadar her bir eleman gecici listeye atilip patlat metoduna maruz 

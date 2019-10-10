@@ -12,7 +12,9 @@ Projelerimi github'aktarma sebeplerim :
   * Harddiskim kaybolabilir .
   * Bilgisyarım bozulabilir .
   * Online düzenleme yapmak isteyebilirim .
+  * İş mülakatlarında geliştirmiş olduğum projeleri gerektiği zaman göstermek istiyorum.
+  * Başkalarına faydalı olmak istiyorum.
   
   Mezun olduğum bölüm: https://bilmuh.ege.edu.tr
   
-  Eposta adresim:mehmet.akif@mcf.com.tr
+  Eposta adresim:mehmetakifilyasogullari@gmail.com
