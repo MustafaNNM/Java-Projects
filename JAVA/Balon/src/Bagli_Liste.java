@@ -1,8 +1,8 @@
-public class BListe {
+public class Bagli_Liste {
 	Balon etkin = null;
 	int katNumarası;
 
-	public BListe(int katNumarası) {// constructor
+	public Bagli_Liste(int katNumarası) {// constructor
 		this.katNumarası = katNumarası;
 		etkin = null;
 	}
