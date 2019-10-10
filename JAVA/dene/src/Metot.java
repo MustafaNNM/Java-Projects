@@ -1,4 +1,4 @@
-package Metot;
+
 import java.util.Vector;
 
 public class Metot {
