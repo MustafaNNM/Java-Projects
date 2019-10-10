@@ -2,10 +2,10 @@ import java.util.Vector;
 
 public class OddNumbers implements Series {
 
-	private Vector<DemoOddNumbers> TekSayýlarListesi;
+	private Vector<Number> TekSayýlarListesi;
 
 	public OddNumbers() {
-		setTekSayýlarListesi(new Vector<DemoOddNumbers>());
+		setTekSayýlarListesi(new Vector<Number>());
 	}
 
 	private int start;
@@ -42,7 +42,7 @@ public class OddNumbers implements Series {
 		}
 		getTekSayýlarListesi().setSize(size);
 		for (int i = 0; i < TekSayýlarListesi.size(); i++) {
-			TekSayýlarListesi.set(i, new DemoOddNumbers());
+			TekSayýlarListesi.set(i, new Number());
 			TekSayýlarListesi.elementAt(i).setNumber(number);
 			number += 2;
 		}
@@ -67,7 +67,7 @@ public class OddNumbers implements Series {
 	}
 
 	public int getNext() {
-		DemoOddNumbers oddnumber = TekSayýlarListesi.get(getPozisyon());
+		Number oddnumber = TekSayýlarListesi.get(getPozisyon());
 		setPozisyon(getPozisyon() + 1);
 		return oddnumber.getNumber();
 	}
@@ -76,11 +76,11 @@ public class OddNumbers implements Series {
 		setPozisyon(0);
 	}
 
-	public void setTekSayýlarListesi(Vector<DemoOddNumbers> tekSayýlarListesi) {
+	public void setTekSayýlarListesi(Vector<Number> tekSayýlarListesi) {
 		TekSayýlarListesi = tekSayýlarListesi;
 	}
 
-	public Vector<DemoOddNumbers> getTekSayýlarListesi() {
+	public Vector<Number> getTekSayýlarListesi() {
 		return TekSayýlarListesi;
 	}
 

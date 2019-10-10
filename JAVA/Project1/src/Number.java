@@ -1,7 +1,7 @@
-public class DemoOddNumbers {
+public class Number {
 	private int number;
 
-	public DemoOddNumbers() {
+	public Number() {
 		number = 0;
 	}
 
