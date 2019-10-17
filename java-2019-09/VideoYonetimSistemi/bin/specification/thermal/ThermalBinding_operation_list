@@ -1,0 +1,8 @@
+GetConfiguration
+GetConfigurationOptions
+GetConfigurations
+GetRadiometryConfiguration
+GetRadiometryConfigurationOptions
+GetServiceCapabilities
+SetConfiguration
+SetRadiometryConfiguration

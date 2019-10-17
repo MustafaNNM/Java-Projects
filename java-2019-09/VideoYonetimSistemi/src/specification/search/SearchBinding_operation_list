@@ -1,0 +1,14 @@
+EndSearch
+FindEvents
+FindMetadata
+FindPTZPosition
+FindRecordings
+GetEventSearchResults
+GetMediaAttributes
+GetMetadataSearchResults
+GetPTZPositionSearchResults
+GetRecordingInformation
+GetRecordingSearchResults
+GetRecordingSummary
+GetSearchState
+GetServiceCapabilities

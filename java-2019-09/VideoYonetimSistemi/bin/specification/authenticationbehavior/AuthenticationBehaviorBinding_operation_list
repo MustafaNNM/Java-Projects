@@ -1,0 +1,17 @@
+CreateAuthenticationProfile
+CreateSecurityLevel
+DeleteAuthenticationProfile
+DeleteSecurityLevel
+GetAuthenticationProfileInfo
+GetAuthenticationProfileInfoList
+GetAuthenticationProfileList
+GetAuthenticationProfiles
+GetSecurityLevelInfo
+GetSecurityLevelInfoList
+GetSecurityLevelList
+GetSecurityLevels
+GetServiceCapabilities
+ModifyAuthenticationProfile
+ModifySecurityLevel
+SetAuthenticationProfile
+SetSecurityLevel

@@ -1,0 +1,10 @@
+CreateActions
+CreateActionTriggers
+DeleteActions
+DeleteActionTriggers
+GetActions
+GetActionTriggers
+GetServiceCapabilities
+GetSupportedActions
+ModifyActions
+ModifyActionTriggers

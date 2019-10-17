@@ -1,0 +1,8 @@
+FocusMove
+GetServiceCapabilities
+GetUsage
+PanMove
+RollMove
+Stop
+TiltMove
+ZoomMove

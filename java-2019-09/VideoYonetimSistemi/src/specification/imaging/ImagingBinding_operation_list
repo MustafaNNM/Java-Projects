@@ -1,0 +1,11 @@
+GetCurrentPreset
+GetImagingSettings
+GetMoveOptions
+GetOptions
+GetPresets
+GetServiceCapabilities
+GetStatus
+Move
+SetCurrentPreset
+SetImagingSettings
+Stop

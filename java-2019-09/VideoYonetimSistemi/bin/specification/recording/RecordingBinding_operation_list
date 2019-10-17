@@ -1,0 +1,15 @@
+ExportRecordedData
+GetExportRecordedDataState
+GetRecordingConfiguration
+GetRecordingJobConfiguration
+GetRecordingJobs
+GetRecordingJobState
+GetRecordingOptions
+GetRecordings
+GetServiceCapabilities
+GetTrackConfiguration
+SetRecordingConfiguration
+SetRecordingJobConfiguration
+SetRecordingJobMode
+SetTrackConfiguration
+StopExportRecordedData

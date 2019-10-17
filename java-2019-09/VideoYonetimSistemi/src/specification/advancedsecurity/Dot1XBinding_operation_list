@@ -1,0 +1,7 @@
+AddDot1XConfiguration
+DeleteDot1XConfiguration
+DeleteNetworkInterfaceDot1XConfiguration
+GetAllDot1XConfigurations
+GetDot1XConfiguration
+GetNetworkInterfaceDot1XConfiguration
+SetNetworkInterfaceDot1XConfiguration

@@ -1,0 +1,10 @@
+CreatePaneConfiguration
+DeletePaneConfiguration
+GetDisplayOptions
+GetLayout
+GetPaneConfiguration
+GetPaneConfigurations
+GetServiceCapabilities
+SetLayout
+SetPaneConfiguration
+SetPaneConfigurations

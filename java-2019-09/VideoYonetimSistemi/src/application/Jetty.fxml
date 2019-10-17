@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.web.*?>
+
+<BorderPane fx:id="mainborderpane" prefHeight="799.9998779296875" prefWidth="1181.0000999999975" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.JettyController">
+  <!-- TODO Add Nodes -->
+  <center>
+    <TabPane fx:id="maintabpane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+      <tabs>
+        <Tab id="livestreamtab" fx:id="livestreamtab" text="Canli Yayin">
+          <content>
+            <AnchorPane fx:id="livestreamtabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BorderPane fx:id="mainsubleftborderpane" layoutX="0.0" layoutY="0.0" prefHeight="769.0" prefWidth="1182.0">
+                  <bottom>
+                    <Pane id="subleftsubbottomborderpane" fx:id="subleftsubbottomborderpane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_CENTER" />
+                  </bottom>
+                  <center>
+                    <Pane fx:id="subleftsubcenterborderpane" prefHeight="369.0" prefWidth="1601.0" BorderPane.alignment="CENTER">
+                      <children>
+                        <ImageView fx:id="currentframe" fitHeight="490.0" fitWidth="490.0" layoutX="346.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="start_button" layoutX="237.0" layoutY="193.0" mnemonicParsing="false" onAction="#start_camera" text="Start Camera" />
+                        <TextArea fx:id="network_url" layoutX="68.0" layoutY="220.0" prefHeight="28.9610595703125" prefWidth="236.0" text="rtsp:///h264_2" wrapText="true" />
+                        <TextField fx:id="network_url_field" layoutX="68.0" layoutY="191.0" prefHeight="28.9610595703125" prefWidth="169.0" text="Lutfen bir Network URL giriniz" />
+                      </children>
+                    </Pane>
+                  </center>
+                  <top>
+                    <Pane fx:id="subleftsubtopborderpane" prefHeight="74.0" prefWidth="1182.0" BorderPane.alignment="TOP_CENTER">
+                      <children>
+                        <Label fx:id="live_stream_label" layoutX="562.0" layoutY="32.0" text="Canli Yayin" />
+                      </children>
+                    </Pane>
+                  </top>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="onvifdevicelisttab" fx:id="onvifdevicelisttab" text="Kamera Listesi">
+          <content>
+            <AnchorPane fx:id="onvifdevicelisttabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BorderPane fx:id="mainsubcenterborderpane" layoutX="0.0" layoutY="0.0" prefHeight="769.0" prefWidth="1181.0">
+                  <bottom>
+                    <Pane fx:id="subcentersubbottomborderpane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_CENTER">
+                      <children>
+                        <Button fx:id="find_onvif_devices" alignment="CENTER" contentDisplay="CENTER" layoutX="528.0" layoutY="90.0" mnemonicParsing="false" onAction="#find_onvif_devices" text="Onvif Cihazlarini Bul" />
+                      </children>
+                    </Pane>
+                  </bottom>
+                  <center>
+                    <Pane fx:id="subcentersubcenterborderpane" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                      <children>
+                        <TextArea fx:id="onvif_ip_device_list" layoutX="468.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.1412353515625" prefWidth="246.0" text="" wrapText="true" />
+                        <Label fx:id="onvif_device_list_label" layoutX="540.0" layoutY="6.0" text="ONVIF Cihaz Listesi" />
+                      </children>
+                    </Pane>
+                  </center>
+                  <top>
+                    <Pane fx:id="subcentersubtopborderpane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="TOP_CENTER" />
+                  </top>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="takephototab" fx:id="takephototab" text="Resim Cekme">
+          <content>
+            <AnchorPane fx:id="takephototabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BorderPane fx:id="mainsubrightborderpane" layoutX="0.0" layoutY="0.0" prefHeight="769.0" prefWidth="1182.0">
+                  <bottom>
+                    <Pane fx:id="subrightsubbottomborderpane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_CENTER">
+                      <children>
+                        <Button fx:id="screanshut_button" layoutX="552.0" layoutY="90.0" mnemonicParsing="false" onAction="#take_screanshut" text="Screanshut" />
+                      </children>
+                    </Pane>
+                  </bottom>
+                  <center>
+                    <Pane fx:id="subrightsubcenterborderpane" prefHeight="368.9999000000025" prefWidth="1182.0" BorderPane.alignment="CENTER">
+                      <children>
+                        <ImageView fx:id="screanshut" fitHeight="495.0" fitWidth="495.0" layoutX="408.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" />
+                      </children>
+                    </Pane>
+                  </center>
+                  <top>
+                    <Pane fx:id="subrightsubtopborderpane" prefHeight="74.0" prefWidth="1182.0" BorderPane.alignment="TOP_CENTER">
+                      <children>
+                        <Label fx:id="screanshut_label" layoutX="557.0" layoutY="29.0" text="Ekran Alintisi" />
+                      </children>
+                    </Pane>
+                  </top>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="settingstab" text="Kamera Ayarlari">
+          <content>
+            <AnchorPane fx:id="settingstabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <WebView fx:id="webview" layoutX="0.0" layoutY="0.0" prefHeight="768.9998779296875" prefWidth="1181.0001220703125" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="onviftab" fx:id="onviftab" text="ONVIF">
+          <content>
+            <AnchorPane fx:id="onviftabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <WebView fx:id="onvif_webview" layoutX="0.0" layoutY="0.0" prefHeight="769.0" prefWidth="1182.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="communication_tab" fx:id="communication_tab" text="Iletisim">
+          <content>
+            <AnchorPane fx:id="communication_tabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label fx:id="sirket_adi_label" layoutX="9.0" layoutY="139.0" text="Sirket Adi" />
+                <Label fx:id="ofis_turu_label" layoutX="9.0" layoutY="155.0" text="Ofis Turu" />
+                <Label fx:id="il_label" layoutX="9.0" layoutY="171.0" text="Il" />
+                <Label fx:id="ilce_label" layoutX="9.0" layoutY="187.0" text="Ilce" />
+                <Label fx:id="mahalle_label" layoutX="9.0" layoutY="203.0" text="Mahalle" />
+                <Label fx:id="cadde_label" layoutX="9.0" layoutY="219.0" text="Cadde" />
+                <Label fx:id="dis_kapi_no_label" layoutX="9.0" layoutY="235.0" text="Dis Kapi No" />
+                <Label fx:id="ic_kapi_no_label" layoutX="9.0" layoutY="251.0" text="Ic Kapi No" />
+                <Label fx:id="telefon_no_label" layoutX="9.0" layoutY="267.0" text="Telefon No" />
+                <Label fx:id="fax_no_label" layoutX="9.0" layoutY="283.0" text="Fax No" />
+                <Label fx:id="sirket_adi_bilgisi" layoutX="87.0" layoutY="139.0" text="MCF A.S" />
+                <Label fx:id="yonetim_ofisi_bilgisi" layoutX="87.0" layoutY="155.0" text="Yonetim Ofisi" />
+                <Label fx:id="il_bilgisi" layoutX="87.0" layoutY="171.0" text="Izmir" />
+                <Label fx:id="ilce_bilgisi" layoutX="87.0" layoutY="187.0" text="Urla" />
+                <Label fx:id="mahalle_bilgisi" layoutX="87.0" layoutY="203.0" text="Gulbahce Mahallesi" />
+                <Label fx:id="cadde_bilgisi" layoutX="87.0" layoutY="219.0" text="Gulbahce Caddesi" />
+                <Label fx:id="bina_bilgisi" layoutX="87.0" layoutY="235.0" text="A1/17" />
+                <Label fx:id="ic_kapi_bilgisi" layoutX="87.0" layoutY="251.0" text="21" />
+                <Label fx:id="telefon_bilgisi" layoutX="87.0" layoutY="267.0" text="0232 290 98 16" />
+                <Label fx:id="fax_bilgisi" layoutX="87.0" layoutY="283.0" text="0850 281 25 72" />
+                <ImageView id="company_logo" fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="file:/D:/github/Java-Projects/java-2019-09/VideoYonetimSistemi/img/mcf-logo.png" />
+                  </image>
+                </ImageView>
+                <Label fx:id="eposta_label" layoutX="10.0" layoutY="299.0" text="Eposta" />
+                <Label fx:id="eposta_bilgisi" layoutX="87.0" layoutY="299.0" text="info@mcf.com.tr" />
+                <Label layoutX="9.0" layoutY="315.0" text="ILETISIM FORMU" />
+                <Label layoutX="9.0" layoutY="331.0" text="Adiniz" />
+                <Label layoutX="10.0" layoutY="350.0" text="Soyadiniz" />
+                <Label layoutX="9.0" layoutY="375.0" text="Telefon numaraniz" />
+                <Label layoutX="10.0" layoutY="396.0" text="E-Posta Adresiniz" />
+                <Label layoutX="9.0" layoutY="419.0" text="Mesajiniz" />
+                <TextField layoutX="119.0" layoutY="325.0" prefWidth="200.0" />
+                <TextField layoutX="119.0" layoutY="348.0" prefWidth="200.0" />
+                <TextField layoutX="119.0" layoutY="370.0" prefWidth="200.0" />
+                <TextField layoutX="119.0" layoutY="392.0" prefWidth="200.0" />
+                <TextArea layoutX="119.0" layoutY="419.0" prefWidth="200.0" wrapText="true" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="motiontab" fx:id="motiontab" text="Resim Farki Alma">
+          <content>
+            <AnchorPane fx:id="motiontabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView fx:id="ilkimageview" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="ikinciimageview" fitHeight="150.0" fitWidth="200.0" layoutX="491.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="sonimageview" fitHeight="150.0" fitWidth="200.0" layoutX="968.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="ilkfotolabel" layoutX="14.0" layoutY="52.0" text="1. Foto" />
+                <Label fx:id="ikincifotolabel" layoutX="491.0" layoutY="55.0" text="2. Foto" />
+                <Label fx:id="sonfotolabel" layoutX="968.0" layoutY="52.0" text="3. Foto" />
+                <Button fx:id="ilkbutton" layoutX="14.0" layoutY="249.0" mnemonicParsing="false" onAction="#firstscreanshut" text="ilkbutton" />
+                <Button fx:id="ikincibutton" layoutX="491.0" layoutY="249.0" mnemonicParsing="false" onAction="#secondscreanshut" text="ikincibutton" />
+                <Button fx:id="sonbutton" layoutX="968.0" layoutY="243.0" mnemonicParsing="false" onAction="#lastscreanshut" text="sonbutton" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="music_player_tab" fx:id="music_player_tab" text="Muzik Calar">
+          <content>
+            <AnchorPane fx:id="music_player_tabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button fx:id="play_button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#play_music" text="Play" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="media_player_tab" fx:id="media_player_tab" text="Medya Oynatici">
+          <content>
+            <AnchorPane fx:id="media_player_tabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <StackPane layoutX="0.0" layoutY="0.0" prefHeight="659.0" prefWidth="1182.0">
+                  <children>
+                    <MediaView fx:id="mediaView" fitHeight="664.8749733585704" fitWidth="1181.9999389648438">
+                      <mediaPlayer>
+                        <MediaPlayer cycleCount="-1">
+                          <media>
+                            <Media source="file:/C:/Users/mehme/Downloads/videoplayback.mp4" />
+                          </media>
+                        </MediaPlayer>
+                      </mediaPlayer>
+                    </MediaView>
+                  </children>
+                </StackPane>
+                <Button fx:id="media_play_button" layoutX="14.0" layoutY="665.0" mnemonicParsing="false" onAction="#play_media" text="Play" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </center>
+</BorderPane>

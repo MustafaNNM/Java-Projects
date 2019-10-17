@@ -1,0 +1,8 @@
+ConfigureReceiver
+CreateReceiver
+DeleteReceiver
+GetReceiver
+GetReceivers
+GetReceiverState
+GetServiceCapabilities
+SetReceiverMode

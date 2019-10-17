@@ -1,0 +1,6 @@
+Program geliþtiriciler için kullaným rehberi dökümanýnýn çevirisi yapýlarak use case dökümaný hazýrlanmaya çalýþýldý.
+OpenCV java kütüphanesi kullanýlarak RTSP protokolü ile ip kameradan görüntü alan masaüstü yazýlým yapýldý.
+Web kamerasýndan görüntü alan masaüstü yazýlým geliþtirildi.
+Web kamerasýndan görüntü alan web sayfasý geliþtirildi.
+Film/video gösteren web sayfasý yapýldý.
+Resim gösteren web sayfasý yapýldý.

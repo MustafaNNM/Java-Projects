@@ -1,0 +1,7 @@
+CreateAnalyticsModules
+DeleteAnalyticsModules
+GetAnalyticsModuleOptions
+GetAnalyticsModules
+GetServiceCapabilities
+GetSupportedAnalyticsModules
+ModifyAnalyticsModules
