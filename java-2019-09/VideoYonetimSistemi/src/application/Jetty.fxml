@@ -171,8 +171,14 @@
           <content>
             <AnchorPane fx:id="motiontabanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <ImageView fx:id="ilkimageview" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="ikinciimageview" fitHeight="150.0" fitWidth="200.0" layoutX="491.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="ilkimageview" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/abrajsiz_kops.BMP" />
+                           </image></ImageView>
+                <ImageView fx:id="ikinciimageview" fitHeight="150.0" fitWidth="200.0" layoutX="491.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/abrajli_kops.BMP" />
+                           </image></ImageView>
                 <ImageView fx:id="sonimageview" fitHeight="150.0" fitWidth="200.0" layoutX="968.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
                 <Label fx:id="ilkfotolabel" layoutX="14.0" layoutY="52.0" text="1. Foto" />
                 <Label fx:id="ikincifotolabel" layoutX="491.0" layoutY="55.0" text="2. Foto" />
