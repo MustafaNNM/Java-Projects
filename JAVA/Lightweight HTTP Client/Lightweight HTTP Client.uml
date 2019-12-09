@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_sAq40An9Eeqn3LAZpnfZZg" name="Lightweight HTTP Client">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_sd61gAn9Eeqn3LAZpnfZZg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_sQ6UQAn9Eeqn3LAZpnfZZg" name="Interaction1"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_sSXs0An9Eeqn3LAZpnfZZg" name="StateMachine2">
+    <region xmi:type="uml:Region" xmi:id="_sSuSIAn9Eeqn3LAZpnfZZg" name="Region1"/>
+  </packagedElement>
+</uml:Model>

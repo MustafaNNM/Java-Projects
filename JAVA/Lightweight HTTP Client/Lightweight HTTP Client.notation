@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style">
+  <notation:Diagram xmi:id="_sPoh4An9Eeqn3LAZpnfZZg" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_sPoh4Qn9Eeqn3LAZpnfZZg" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_sPoh4gn9Eeqn3LAZpnfZZg"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_sPoh4wn9Eeqn3LAZpnfZZg" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
+      <owner href="Lightweight%20HTTP%20Client.uml#_sAq40An9Eeqn3LAZpnfZZg"/>
+    </styles>
+    <element href="Lightweight%20HTTP%20Client.uml#_sAq40An9Eeqn3LAZpnfZZg"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_sR8PAAn9Eeqn3LAZpnfZZg" type="PapyrusUMLSequenceDiagram" name="Sequence Diagram" measurementUnit="Pixel">
+    <children xsi:type="notation:Shape" xmi:id="_sR8PAQn9Eeqn3LAZpnfZZg" type="Interaction_Shape">
+      <children xsi:type="notation:DecorationNode" xmi:id="_sR8PAgn9Eeqn3LAZpnfZZg" type="Interaction_NameLabel"/>
+      <children xsi:type="notation:BasicCompartment" xmi:id="_sR8PAwn9Eeqn3LAZpnfZZg" type="Interaction_SubfragmentCompartment">
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sR8PBAn9Eeqn3LAZpnfZZg"/>
+      </children>
+      <element href="Lightweight%20HTTP%20Client.uml#_sQ6UQAn9Eeqn3LAZpnfZZg"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sR8PBQn9Eeqn3LAZpnfZZg"/>
+    </children>
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_sR8PBgn9Eeqn3LAZpnfZZg" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_sR8PBwn9Eeqn3LAZpnfZZg"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_sR8PCAn9Eeqn3LAZpnfZZg" diagramKindId="org.eclipse.papyrus.uml.diagram.sequence">
+      <owner href="Lightweight%20HTTP%20Client.uml#_sAq40An9Eeqn3LAZpnfZZg"/>
+    </styles>
+    <element href="Lightweight%20HTTP%20Client.uml#_sQ6UQAn9Eeqn3LAZpnfZZg"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_sSKRcAn9Eeqn3LAZpnfZZg" type="UseCase" name="Use Case Diagram" measurementUnit="Pixel">
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_sSKRcQn9Eeqn3LAZpnfZZg" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_sSKRcgn9Eeqn3LAZpnfZZg"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_sSKRcwn9Eeqn3LAZpnfZZg" diagramKindId="org.eclipse.papyrus.uml.diagram.useCase">
+      <owner href="Lightweight%20HTTP%20Client.uml#_sAq40An9Eeqn3LAZpnfZZg"/>
+    </styles>
+    <element href="Lightweight%20HTTP%20Client.uml#_sAq40An9Eeqn3LAZpnfZZg"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_sS7GcAn9Eeqn3LAZpnfZZg" type="PapyrusUMLStateMachineDiagram" name="State Machine Diagram" measurementUnit="Pixel">
+    <children xsi:type="notation:Shape" xmi:id="_sS7GcQn9Eeqn3LAZpnfZZg" type="StateMachine_Shape">
+      <children xsi:type="notation:DecorationNode" xmi:id="_sS7Gcgn9Eeqn3LAZpnfZZg" type="StateMachine_NameLabel">
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sS7Gcwn9Eeqn3LAZpnfZZg" width="700" height="20"/>
+      </children>
+      <children xsi:type="notation:BasicCompartment" xmi:id="_sS7GdAn9Eeqn3LAZpnfZZg" type="StateMachine_RegionCompartment">
+        <children xsi:type="notation:Shape" xmi:id="_sS7GdQn9Eeqn3LAZpnfZZg" type="Region_Shape">
+          <eAnnotations xmi:id="_sS7Gdgn9Eeqn3LAZpnfZZg" source="RegionAnnotationKey">
+            <details xmi:id="_sS7Gdwn9Eeqn3LAZpnfZZg" key="RegionZoneKey" value=""/>
+          </eAnnotations>
+          <children xsi:type="notation:BasicCompartment" xmi:id="_sS7GeAn9Eeqn3LAZpnfZZg" type="Region_SubvertexCompartment">
+            <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sS7GeQn9Eeqn3LAZpnfZZg"/>
+          </children>
+          <element href="Lightweight%20HTTP%20Client.uml#_sSuSIAn9Eeqn3LAZpnfZZg"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sS7Gegn9Eeqn3LAZpnfZZg" width="700" height="280"/>
+        </children>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sS7Gewn9Eeqn3LAZpnfZZg" y="20" width="700" height="280"/>
+      </children>
+      <element href="Lightweight%20HTTP%20Client.uml#_sSXs0An9Eeqn3LAZpnfZZg"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sS7GfAn9Eeqn3LAZpnfZZg" x="30" y="30" width="700" height="300"/>
+    </children>
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_sS7GfQn9Eeqn3LAZpnfZZg" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_sS7Gfgn9Eeqn3LAZpnfZZg"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_sS7Gfwn9Eeqn3LAZpnfZZg" diagramKindId="org.eclipse.papyrus.uml.diagram.stateMachine">
+      <owner href="Lightweight%20HTTP%20Client.uml#_sAq40An9Eeqn3LAZpnfZZg"/>
+    </styles>
+    <element href="Lightweight%20HTTP%20Client.uml#_sSXs0An9Eeqn3LAZpnfZZg"/>
+  </notation:Diagram>
+</xmi:XMI>
