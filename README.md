@@ -7,13 +7,14 @@ Projelerimi github'aktarma sebeplerim :
   * Pek çok kez yedeğini aldım ve gereksiz yedekler var .
   * Farklı versiyonlar ortaya çıktı .
   * Projelerdeki gereksiz kopyaları azaltmak istiyorum .
-  * Düzenli bir şekilde bir arada toplamak istiyorum .
+  * Düzenli bir şekilde tüm projelerimi bir arada toplamak istiyorum .
   * Projelerimi açık kaynaklı olarak paylaşıma açmak istedim .
-  * Harddiskim kaybolabilir .
+  * Harddiskim kaybolabilir (Seneler önce kayboldu) .
   * Bilgisyarım bozulabilir .
-  * Online düzenleme yapmak isteyebilirim .
-  * İş mülakatlarında geliştirmiş olduğum projeleri gerektiği zaman göstermek istiyorum.
-  * Başkalarına faydalı olmak istiyorum.
+  * Ani elektrik kesintisi ile veri kaybı yaşayabilirim .
+  * Online düzenleme yapmak isteyebilirim (Github mobil beta sürümüne üye oldum) .
+  * İş mülakatlarında geliştirmiş olduğum projeleri gerektiği zaman göstermek istiyorum .
+  * Başkalarına faydalı olmak istiyorum .
   
   Mezun olduğum bölüm: https://bilmuh.ege.edu.tr
   
